@@ -8,7 +8,7 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 
-const colums = [
+const columns = [
   { id: "departure", label: "Departure Station", minWidth: 100 },
   { id: "return", label: "Return Station", minWidth: 170 },
   {
@@ -25,7 +25,7 @@ const colums = [
   },
 ];
 
-export const JourneyHead = ({ journey }) => {
+export const JourneyHead = ({ journey, setShowJourney, showJourney }) => {
   const {
     Departure_station_name,
     Return_station_name,
@@ -40,7 +40,7 @@ export const JourneyHead = ({ journey }) => {
           {/* table head */}
           <TableHead>
             <TableRow>
-              {colums.map((column) => (
+              {columns.map((column) => (
                 <TableCell
                   key={column.id}
                   align={column.align}
@@ -50,9 +50,22 @@ export const JourneyHead = ({ journey }) => {
                 </TableCell>
               ))}
             </TableRow>
-            {/* {(Duration / 60).toFixed(2)} */}
           </TableHead>
           {/* table body */}
+          <TableBody>
+            <TableRow hover role="checkbox" tabIndex={-1}>
+              <TableCell key={columns.departure}>
+                {Departure_station_name}
+              </TableCell>
+              <TableCell key={columns.return} align={columns.align}>
+                {Return_station_name}
+              </TableCell>
+              <TableCell key={columns.distance}>{Covered_distance}</TableCell>
+              <TableCell key={columns.duration}>
+                {(Duration / 60).toFixed(2)}
+              </TableCell>
+            </TableRow>
+          </TableBody>
         </Table>
       </TableContainer>
     </Paper>

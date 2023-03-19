@@ -21,7 +21,12 @@ export const Journeys = () => {
   if (isError) return <p>Error: {error.message}</p>;
 
   const content = journeys.map((journey, id, index) => (
-    <JourneyHead key={id} journey={journey} />
+    <JourneyHead
+      key={id}
+      journey={journey}
+      showJourney={showJourney}
+      setShowJourney={setShowJourney}
+    />
   ));
 
   return (
