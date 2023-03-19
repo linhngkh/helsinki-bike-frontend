@@ -1,9 +1,9 @@
-import Journey from "./Journey";
+import { Journeys } from "./components/Journeys";
 
 function App() {
   return (
     <div>
-      <Journey />
+      <Journeys />
     </div>
   );
 }
