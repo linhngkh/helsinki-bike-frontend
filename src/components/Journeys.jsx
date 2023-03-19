@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "react-query";
 import { getJourneysData } from "../api/axios";
-
+import { JourneyTable } from "./JourneyTable";
 export const Journeys = () => {
   const [showJourney, setShowJourney] = useState(0);
 
@@ -19,5 +19,14 @@ export const Journeys = () => {
   if (isLoading) return <p>Loading journeys...</p>;
   if (isError) return <p>Error: {error.message}</p>;
 
-  return <div>Journeys</div>;
+  const content = journeys.map((journey, id) => (
+    <JourneyTable key={id} journey={journey} />
+  ));
+
+  return (
+    <div>
+      {isFetching && <span>Loading ...</span>}
+      {content}
+    </div>
+  );
 };
