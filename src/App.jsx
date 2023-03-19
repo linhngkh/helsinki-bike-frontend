@@ -1,5 +1,11 @@
+import Journey from "./Journey";
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <Journey />
+    </div>
+  );
 }
 
 export default App;
