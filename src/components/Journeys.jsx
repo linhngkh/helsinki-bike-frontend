@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "react-query";
 import { getJourneysData } from "../api/axios";
-import { JourneyHead } from "./JourneyHead";
+import { Journey } from "./Journey";
 
 export const Journeys = () => {
   const [showJourney, setShowJourney] = useState(0);
@@ -21,7 +21,7 @@ export const Journeys = () => {
   if (isError) return <p>Error: {error.message}</p>;
 
   const content = journeys.map((journey, id, index) => (
-    <JourneyHead
+    <Journey
       key={id}
       journey={journey}
       showJourney={showJourney}
