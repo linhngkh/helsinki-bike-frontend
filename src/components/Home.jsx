@@ -9,7 +9,7 @@ const BigContainer = styled.div`
   align-items: center;
   min-height: 90vh;
   margin: 0 auto;
-  background-image: url("/public/assets/bd.jpeg");
+  background-image: url("/src/assets/bd.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

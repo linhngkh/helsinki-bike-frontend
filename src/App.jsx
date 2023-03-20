@@ -9,6 +9,7 @@ import { Journeys } from "./components/Journeys";
 import Home from "./components/Home";
 import "./index.css";
 import NavBar from "./components/NavBar";
+import Stations from "./components/Stations";
 
 function App() {
   const router = createBrowserRouter(
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<Root />}>
         <Route index element={<Home />} />
         <Route path="/journeys" element={<Journeys />} />
+        <Route path="/stations" element={<Stations />} />
       </Route>
     )
   );

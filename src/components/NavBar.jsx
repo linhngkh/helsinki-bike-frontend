@@ -8,7 +8,7 @@ const NavBarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  min-height: 90px;
+  height: 70px;
   margin: 0 auto;
   background-color: white;
 `;
@@ -47,6 +47,7 @@ const TextTitle = styled(Text)`
 
 const NavButton = styled(Button)`
   background-color: white;
+  padding: 5px 10px;
   &:hover {
     background-color: #ff7b00;
   }

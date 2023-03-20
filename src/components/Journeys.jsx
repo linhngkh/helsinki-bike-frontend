@@ -20,7 +20,12 @@ export const Journeys = () => {
     keepPreviousData: true,
   });
 
-  if (isLoading) return <p>Loading journeys...</p>;
+  if (isLoading)
+    return (
+      <>
+        <p>Loading journeys...</p>
+      </>
+    );
   if (isError) return <p>Error: {error.message}</p>;
   const content = journeys.map((journey, _index) => (
     <TimeTable key={_index} journey={journey} />
