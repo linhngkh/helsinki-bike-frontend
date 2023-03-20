@@ -39,7 +39,7 @@ export const Journeys = () => {
   ));
 
   return (
-    <Container id="change">
+    <Container>
       {isFetching && <span>Loading ...</span>}
       {content}
     </Container>
