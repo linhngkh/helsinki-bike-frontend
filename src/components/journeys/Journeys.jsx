@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "react-query";
-import { getJourneysData } from "../api/axios";
-import TimeTable from "./TimeTable";
+import { getJourneysData } from "../../api/axios";
+import Journey from "./Journey";
 import styled from "styled-components";
 
 const Container = styled.div``;
@@ -35,7 +35,7 @@ export const Journeys = () => {
     );
   if (isError) return <p>Error: {error.message}</p>;
   const content = journeys.map((journey, _index) => (
-    <TimeTable key={_index} journey={journey} />
+    <Journey key={_index} journey={journey} />
   ));
 
   return (

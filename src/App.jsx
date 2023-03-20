@@ -5,11 +5,11 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-import { Journeys } from "./components/Journeys";
+import { Journeys } from "./components/journeys/Journeys";
 import Home from "./components/Home";
 import "./index.css";
 import NavBar from "./components/NavBar";
-import Stations from "./components/Stations";
+import Stations from "./components/stations/Stations";
 
 function App() {
   const router = createBrowserRouter(

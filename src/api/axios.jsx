@@ -13,3 +13,9 @@ export const getJourneysData = async (pageParam = 0) => {
   console.log(response.data);
   return response.data;
 };
+
+export const getStationsData = async () => {
+  const response = await axiosFetch.get(`/stations`);
+  console.log(response.data);
+  return response.data;
+};
