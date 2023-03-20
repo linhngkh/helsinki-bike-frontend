@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Typography from "@mui/material/Typography";
+import { Button } from "./styled/ButtonStyled";
 
 const NavBarContainer = styled.div`
   position: sticky;
@@ -34,22 +34,43 @@ const Text = styled.h5`
   }
 
   &:hover {
-    color: #ffa600;
+    color: white;
   }
 `;
+
+const TextTitle = styled(Text)`
+  fontsize: "25px";
+  &:hover {
+    color: black;
+  }
+`;
+
+const NavButton = styled(Button)`
+  background-color: white;
+  &:hover {
+    background-color: #ff7b00;
+  }
+`;
+
 const NavBar = () => {
   return (
     <NavBarContainer>
       <Logo>
         <LogoImage src="https://m.media-amazon.com/images/I/51-G-vCgr2L.png" />
-        <Text style={{ fontSize: "25px" }}>CITYBIKES</Text>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <TextTitle>CITYBIKES</TextTitle>
+        </Link>
       </Logo>
 
-      <Link to="/" style={{ textDecoration: "none" }}>
-        <Text>Home</Text>
-      </Link>
       <Link to="/journeys" style={{ textDecoration: "none" }}>
-        <Text>All Journeys Information</Text>
+        <NavButton>
+          <Text>Journeys</Text>
+        </NavButton>
+      </Link>
+      <Link to="/stations" style={{ textDecoration: "none" }}>
+        <NavButton>
+          <Text>Stations</Text>
+        </NavButton>
       </Link>
     </NavBarContainer>
   );
