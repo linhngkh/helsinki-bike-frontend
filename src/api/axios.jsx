@@ -2,10 +2,10 @@ import axios from "axios";
 
 // http://localhost:8080/api/journeys?page=32333
 
-const baseURL = "http://localhost:8080/api";
+const BASE_URL = "http://localhost:8080/api";
 
 export const axiosFetch = axios.create({
-  baseURL: baseURL,
+  baseURL: BASE_URL,
 });
 
 export const getJourneysData = async (pageParam = 0) => {
