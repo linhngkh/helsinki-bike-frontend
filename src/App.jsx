@@ -2,18 +2,19 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
-  Link,
   Outlet,
   RouterProvider,
 } from "react-router-dom";
 import { Journeys } from "./components/Journeys";
-import LandingPage from "./components/LandingPage";
+import Home from "./components/Home";
 import "./index.css";
+import NavBar from "./components/NavBar";
+
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
-        <Route index element={<LandingPage />} />
+        <Route index element={<Home />} />
         <Route path="/journeys" element={<Journeys />} />
       </Route>
     )
@@ -29,10 +30,7 @@ function App() {
 const Root = () => {
   return (
     <>
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/journeys">Journey</Link>
-      </div>
+      <NavBar />
       <div>
         <Outlet />
       </div>
