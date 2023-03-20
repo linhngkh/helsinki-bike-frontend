@@ -2,6 +2,9 @@ import { useState } from "react";
 import { useQuery } from "react-query";
 import { getJourneysData } from "../api/axios";
 import TimeTable from "./TimeTable";
+import styled from "styled-components";
+
+const Container = styled.div``;
 
 export const Journeys = () => {
   const [showJourney, setShowJourney] = useState(0);
@@ -24,10 +27,9 @@ export const Journeys = () => {
   ));
 
   return (
-    <div>
+    <Container id="change">
       {isFetching && <span>Loading ...</span>}
-
       {content}
-    </div>
+    </Container>
   );
 };
