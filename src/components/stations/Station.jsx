@@ -1,7 +1,15 @@
-import React from "react";
+import { TableCell, TableRow, TablePagination } from "@mui/material";
 
 const Station = ({ station }) => {
-  return <div>{station.Nimi}</div>;
+  const { ID, Nimi } = station || null;
+  return (
+    <TableRow hover role="checkbox" tabIndex={-1}>
+      <TableCell>{ID}</TableCell>
+      <TableCell>{Nimi}</TableCell>
+      <TableCell>{Nimi}</TableCell>
+      <TableCell>{Nimi}</TableCell>
+    </TableRow>
+  );
 };
 
 export default Station;

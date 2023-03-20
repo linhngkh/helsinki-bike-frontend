@@ -2,10 +2,19 @@ import { useState } from "react";
 import { useQuery } from "react-query";
 import { getStationsData } from "../../api/axios";
 import styled from "styled-components";
+import Station from "./Station";
+
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  TablePagination,
+} from "@mui/material";
 
 const Container = styled.div``;
 
-import Station from "./Station";
 const Stations = () => {
   const [showStations, setShowStations] = useState([]);
 
@@ -38,8 +47,22 @@ const Stations = () => {
     );
   if (isError) return <p>Error: {error.message}</p>;
 
-  const content = stations.map((station, _index) => (
-    <Station key={_index} station={station} />
+  const content = stations.map((station, index) => (
+    <Table key={index} sx={{ tableLayout: "fixed" }}>
+      <TableHead sx={{ verticalAlign: "middle" }}>
+        <TableRow
+          sx={{ textAlign: "left", fontSize: "18px", fontWeight: "bold" }}
+        >
+          <TableCell sx={{ fontWeight: "bold" }}>Name</TableCell>
+          <TableCell sx={{ fontWeight: "bold" }}>ID</TableCell>
+          <TableCell sx={{ fontWeight: "bold" }}>City</TableCell>
+          <TableCell sx={{ fontWeight: "bold" }}>Country</TableCell>
+        </TableRow>
+      </TableHead>
+      <TableBody>
+        <Station key={index} station={station} />
+      </TableBody>
+    </Table>
   ));
 
   return (
