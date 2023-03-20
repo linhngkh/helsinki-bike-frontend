@@ -22,9 +22,16 @@ export const Journeys = () => {
 
   if (isLoading)
     return (
-      <>
-        <LoadingSkeleton />
-      </>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "20px",
+        }}
+      >
+        <h2>Loading journey... Please wait for a moment...⏳ </h2>
+      </div>
     );
   if (isError) return <p>Error: {error.message}</p>;
   const content = journeys.map((journey, _index) => (
