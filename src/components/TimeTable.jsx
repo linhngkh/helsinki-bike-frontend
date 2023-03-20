@@ -7,6 +7,7 @@ import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import TableContainer from "@mui/material/TableContainer";
+import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 
 const TimeTable = ({ journey }) => {
   const [page, setPage] = React.useState(0);
@@ -25,15 +26,21 @@ const TimeTable = ({ journey }) => {
       sx={{
         width: "100%",
         overflow: "hidden",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
       }}
     >
-      <TableContainer sx={{ maxHeight: 440 }}>
-        <Table>
-          <TableHead>
-            <TableRow>
+      <TableContainer
+        sx={{
+          maxHeight: 440,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          paddingLeft: "50px",
+          borderCollapse: "collapse",
+        }}
+      >
+        <Table sx={{ tableLayout: "fixed" }}>
+          <TableHead sx={{ verticalAlign: "middle" }}>
+            <TableRow sx={{ textAlign: "left", fontSize: "18px" }}>
               <TableCell sx={{ fontWeight: "bold" }}>
                 Departure Station
               </TableCell>
@@ -46,7 +53,10 @@ const TimeTable = ({ journey }) => {
           </TableHead>
           <TableBody>
             <TableRow hover role="checkbox" tabIndex={-1}>
-              <TableCell> {journey.Departure_station_name}</TableCell>
+              <TableCell>
+                <DirectionsBikeIcon sx={{ mr: 1 }} />
+                {journey.Departure_station_name}
+              </TableCell>
               <TableCell>{journey.Return_station_name}</TableCell>
               <TableCell>
                 {" "}
