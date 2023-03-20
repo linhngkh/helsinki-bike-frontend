@@ -23,7 +23,7 @@ export const Journeys = () => {
   if (isLoading)
     return (
       <>
-        <p>Loading journeys...</p>
+        <LoadingSkeleton />
       </>
     );
   if (isError) return <p>Error: {error.message}</p>;

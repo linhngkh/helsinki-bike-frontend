@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "./styled/ButtonStyled";
+import { Link, NavLink } from "react-router-dom";
 
 const BigContainer = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ const BigContainer = styled.div`
 
 const Container = styled.div`
   position: relative;
-  bottom: 160px;
+  bottom: 220px;
 `;
 
 const Title = styled.h1`
@@ -35,6 +36,7 @@ const ButtonContainer = styled.div`
 
 const ButtonGroup = styled(Button)`
   color: white;
+
   &:hover {
     background-color: #b45309;
   }
@@ -46,8 +48,12 @@ const LandingPage = () => {
       <Container>
         <Title>HELSINKI CITY BIKES </Title>
         <ButtonContainer>
-          <ButtonGroup>VIEW STATIONS </ButtonGroup>
-          <ButtonGroup>VIEW JOURNEYS</ButtonGroup>
+          <Link to="/journeys">
+            <ButtonGroup>VIEW JOURNEYS</ButtonGroup>
+          </Link>
+          <Link to="/stations">
+            <ButtonGroup>VIEW STATIONS</ButtonGroup>
+          </Link>
         </ButtonContainer>
       </Container>
     </BigContainer>
