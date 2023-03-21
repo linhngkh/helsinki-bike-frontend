@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "./styled/Styled";
 import { Link } from "react-router-dom";
+import { motion as m } from "framer-motion";
 
 const BigContainer = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ const BigContainer = styled.div`
   align-items: center;
   min-height: 90vh;
   margin: 0 auto;
-  background-image: url("/src/assets/bd.jpeg");
+  background-image: url("/public/assets/bd.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,19 +47,25 @@ const ButtonGroup = styled(Button)`
 
 const LandingPage = () => {
   return (
-    <BigContainer>
-      <Container>
-        <Title>HELSINKI CITY BIKES </Title>
-        <ButtonContainer>
-          <Link to="/journeys">
-            <ButtonGroup>VIEW JOURNEYS</ButtonGroup>
-          </Link>
-          <Link to="/stations">
-            <ButtonGroup>VIEW STATIONS</ButtonGroup>
-          </Link>
-        </ButtonContainer>
-      </Container>
-    </BigContainer>
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.75, ease: "circInOut" }}
+    >
+      <BigContainer>
+        <Container>
+          <Title>HELSINKI CITY BIKES </Title>
+          <ButtonContainer>
+            <Link to="/journeys">
+              <ButtonGroup>VIEW JOURNEYS</ButtonGroup>
+            </Link>
+            <Link to="/stations">
+              <ButtonGroup>VIEW STATIONS</ButtonGroup>
+            </Link>
+          </ButtonContainer>
+        </Container>
+      </BigContainer>
+    </m.div>
   );
 };
 

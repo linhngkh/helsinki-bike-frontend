@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { fetchStation } from "../../api/axios";
 import { useQuery } from "react-query";
-import styled from "styled-components";
 
 import Loading from "../utils/Loading";
 import TableStations from "./TableStations";
