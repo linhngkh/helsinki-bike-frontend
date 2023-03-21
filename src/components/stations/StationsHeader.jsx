@@ -3,7 +3,7 @@ import React from "react";
 import { TableSortLabel, TableHead, TableRow, TableCell } from "@mui/material";
 
 export const columns = [
-  { id: "id", label: "Departure", minWidth: 170 },
+  { id: "id", label: "Name", minWidth: 170 },
   { id: "return", label: "Return", minWidth: 100 },
   {
     id: "distance",
@@ -20,7 +20,7 @@ export const columns = [
     format: (value) => (value / 60).toFixed(1),
   },
 ];
-const JourneyHeader = (props) => {
+const StationsHeader = (props) => {
   const { orderDirection, orderValueBy, handleSorting } = props;
 
   const createHandleSorting = (property) => (event) => {
@@ -52,4 +52,4 @@ const JourneyHeader = (props) => {
   );
 };
 
-export default JourneyHeader;
+export default StationsHeader;

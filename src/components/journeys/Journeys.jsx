@@ -1,40 +1,61 @@
 import React, { useState } from "react";
-import { useGlobalContext } from "../../contextAPI/context";
+import { useQuery } from "react-query";
+import { fetchJourney } from "../../api/axios";
+import TableJourney from "./TableJourney";
 import Loading from "../utils/Loading";
-import Paper from "@mui/material/Paper";
-import Table from "@mui/material/Table";
-import TableContainer from "@mui/material/TableContainer";
-import TableHeader from "./TableHeader";
-import TableBody from "./TableBody";
+import PaginationButton from "../utils/PaginationButton";
 
 const Journeys = () => {
-  const { loading, journeys } = useGlobalContext();
-  const [orderDirection, setOrderDirection] = useState("asc");
-  const [orderValueBy, setOrderValueBy] = useState("id");
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-  const handleSorting = (event, property) => {
-    const isAscending = orderValueBy === property && orderDirection === "asc";
-    setOrderValueBy(property);
-    setOrderDirection(isAscending ? "desc" : "asc");
-  };
+  const {
+    isLoading,
+    isError,
+    error,
+    data: journeys,
+    isFetching,
+    isPreviousData,
+  } = useQuery(["journeys", page], () => fetchJourney(page), {
+    keepPreviousData: true,
+  });
 
-  if (loading) return <Loading />;
+  if (isLoading) return <Loading />;
+
+  if (isError) return <p>Error: {error.message}</p>;
+
+  const lastPage = () => setPage(journeys.total_pages);
+
+  const firstPage = () => setPage(0);
+
+  const pagesArray = Array(journeys.total_pages)
+    .fill()
+    .map((_, index) => index + 1);
+
+  const nav = (
+    <nav>
+      <button onClick={firstPage} disabled={isPreviousData || page === 0}>
+        &lt;&lt;
+      </button>
+      {pagesArray.map((pg) => (
+        <PaginationButton key={pg} pg={pg} setPage={setPage} />
+      ))}
+      <button
+        onClick={lastPage}
+        disabled={isPreviousData || page === journeys.total_pages}
+      >
+        &gt;&gt;
+      </button>
+    </nav>
+  );
 
   return (
-    <Paper sx={{ width: "70%", overflow: "hidden", margin: "0 auto" }}>
-      <TableContainer sx={{ maxHeight: 440 }}>
-        <Table stickyHeader aria-label="sticky table">
-          <TableHeader
-            orderValueBy={orderValueBy}
-            orderDirection={orderDirection}
-            handleSorting={handleSorting}
-          />
-          <TableBody journeys={journeys} />
-        </Table>
-      </TableContainer>
-    </Paper>
+    <>
+      {isFetching && <Loading />}
+      {journeys.map((journey, index) => (
+        <TableJourney key={index.id} journey={journey} />
+      ))}
+      {nav}
+    </>
   );
 };
 
