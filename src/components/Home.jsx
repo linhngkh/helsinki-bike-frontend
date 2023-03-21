@@ -25,6 +25,7 @@ const Title = styled.h1`
   font-size: 60px;
   font-weight: bold;
   letter-spacing: 16px;
+  -webkit-text-stroke: 2px white;
 `;
 
 const ButtonContainer = styled.div`
@@ -40,7 +41,6 @@ const ButtonGroup = styled(Button)`
 
   &:hover {
     background-color: #b45309;
-    
   }
 `;
 
