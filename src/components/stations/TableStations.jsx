@@ -1,15 +1,23 @@
 import React, { useState } from "react";
-import Paper from "@mui/material/Paper";
-import Table from "@mui/material/Table";
-import TableContainer from "@mui/material/TableContainer";
 import StationsBody from "./StationsBody";
 import StationsHeader from "./StationsHeader";
+import { TablePagination, TableContainer, Table, Paper } from "@mui/material";
+
 
 const TableStations = ({ station }) => {
   const [orderDirection, setOrderDirection] = useState("asc");
   const [orderValueBy, setOrderValueBy] = useState("id");
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(+event.target.value);
+    setPage(0);
+  };
 
   const handleSorting = (event, property) => {
     const isAscending = orderValueBy === property && orderDirection === "asc";
@@ -39,6 +47,15 @@ const TableStations = ({ station }) => {
           <StationsBody station={station} />
         </Table>
       </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[10, 25, 100]}
+        component="div"
+        count={457}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
     </Paper>
   );
 };

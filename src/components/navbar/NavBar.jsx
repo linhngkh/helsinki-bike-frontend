@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Button } from "./styled/Styled";
+import { Button } from "../styled/Styled";
 
 const NavBarContainer = styled.div`
   position: sticky;
