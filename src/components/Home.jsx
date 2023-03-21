@@ -18,11 +18,11 @@ const BigContainer = styled.div`
 
 const Container = styled.div`
   position: relative;
-  bottom: 220px;
+  bottom: 240px;
 `;
 
 const Title = styled.h1`
-  font-size: 50px;
+  font-size: 60px;
   font-weight: bold;
   letter-spacing: 16px;
 `;
