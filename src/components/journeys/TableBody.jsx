@@ -1,9 +1,10 @@
-import React from "react";
+
 import TableBody from "@mui/material/TableBody";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
 
 const JourneyBody = ({ journeys }) => {
+ 
   const {
     Departure_station_name,
     Return_station_name,

@@ -2,7 +2,13 @@ import React from "react";
 
 import { TableSortLabel, TableHead, TableRow, TableCell } from "@mui/material";
 
-const JourneyHeader = () => {
+const JourneyHeader = (props) => {
+  const { orderDirection, orderValueBy, handleSorting } = props;
+
+  const createHandleSorting = (property) => (event) => {
+    handleSorting(event, property);
+  };
+
   const columns = [
     { id: "id", label: "Departure", minWidth: 170 },
     { id: "return", label: "Return", minWidth: 100 },
@@ -32,9 +38,11 @@ const JourneyHeader = () => {
             style={{ minWidth: column.minWidth }}
           >
             <TableSortLabel
-              active={"id" === "id"}
-              direction="asc"
-              // onClick={}
+              active={orderValueBy === "column.id"}
+              direction={
+                orderDirection == "column.label" ? orderDirection : "asc"
+              }
+              onClick={createHandleSorting}
             >
               {column.label}
             </TableSortLabel>
