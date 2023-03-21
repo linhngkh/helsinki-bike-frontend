@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import StationsBody from "./StationsBody";
+import { columns } from "./StationsHeader";
 import StationsHeader from "./StationsHeader";
 import { TablePagination, TableContainer, Table, Paper } from "@mui/material";
-
-
-const TableStations = ({ station }) => {
+import TableBody from "@mui/material/TableBody";
+import TableRow from "@mui/material/TableRow";
+import TableCell from "@mui/material/TableCell";
+const TableStations = ({ stations }) => {
   const [orderDirection, setOrderDirection] = useState("asc");
   const [orderValueBy, setOrderValueBy] = useState("id");
-  const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-
+  const [page, setPage] = useState(0);
+  const handleSorting = (event, property) => {
+    const isAscending = orderValueBy === property && orderDirection === "asc";
+    setOrderValueBy(property);
+    setOrderDirection(isAscending ? "desc" : "asc");
+  };
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -18,13 +23,6 @@ const TableStations = ({ station }) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
-
-  const handleSorting = (event, property) => {
-    const isAscending = orderValueBy === property && orderDirection === "asc";
-    setOrderValueBy(property);
-    setOrderDirection(isAscending ? "desc" : "asc");
-  };
-
   return (
     <Paper
       sx={{
@@ -44,13 +42,37 @@ const TableStations = ({ station }) => {
             orderDirection={orderDirection}
             handleSorting={handleSorting}
           />
-          <StationsBody station={station} />
+          <TableBody>
+            {stations
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((station) => {
+                return (
+                  <TableRow
+                    hover
+                    role="checkbox"
+                    tabIndex={-1}
+                    key={station.code}
+                  >
+                    {columns.map((column) => {
+                      const value = station[column.id];
+                      return (
+                        <TableCell key={station.id} align={station.align}>
+                          {column.format && typeof value === "number"
+                            ? column.format(value)
+                            : value}
+                        </TableCell>
+                      );
+                    })}
+                  </TableRow>
+                );
+              })}
+          </TableBody>
         </Table>
       </TableContainer>
       <TablePagination
         rowsPerPageOptions={[10, 25, 100]}
         component="div"
-        count={457}
+        count={stations.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}

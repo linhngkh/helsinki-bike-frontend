@@ -54,9 +54,8 @@ const Stations = () => {
     <>
       {nav}
       {isFetching && <Loading />}
-      {stations.map((station, index) => (
-        <TableStations key={index} station={station} />
-      ))}
+
+      <TableStations stations={stations} />
     </>
   );
 };
