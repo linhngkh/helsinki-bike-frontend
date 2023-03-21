@@ -5,7 +5,7 @@ import {
   Outlet,
   RouterProvider,
 } from "react-router-dom";
-import { Journeys } from "./components/journeys/Journeys";
+import Journeys from "./components/journeys/Journeys";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import Stations from "./components/stations/Stations";

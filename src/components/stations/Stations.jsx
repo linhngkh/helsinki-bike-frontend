@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useQuery } from "react-query";
-import { getStationsData } from "../../api/axios";
 import styled from "styled-components";
 import Station from "./Station";
 
@@ -18,20 +16,6 @@ const Container = styled.div``;
 const Stations = () => {
   const [showStations, setShowStations] = useState([]);
 
-  const {
-    isLoading,
-    isError,
-    error,
-    data: stations,
-    isFetching,
-    isPreviousData,
-  } = useQuery(
-    ["/stations", showStations],
-    () => getStationsData(showStations),
-    {
-      keepPreviousData: true,
-    }
-  );
   if (isLoading)
     return (
       <div
@@ -74,3 +58,5 @@ const Stations = () => {
 };
 
 export default Stations;
+
+

@@ -54,7 +54,9 @@ const NavBar = () => {
       </Link>
       <Logo>
         <Link to="/" style={{ textDecoration: "none" }}>
-          <LogoImage src="https://m.media-amazon.com/images/I/51-G-vCgr2L.png" />
+          <NavButton>
+            <LogoImage src="https://m.media-amazon.com/images/I/51-G-vCgr2L.png" />
+          </NavButton>
         </Link>
       </Logo>
       <Link to="/stations" style={{ textDecoration: "none" }}>
