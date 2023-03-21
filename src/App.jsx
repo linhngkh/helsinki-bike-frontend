@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 import { Journeys } from "./components/journeys/Journeys";
 import Home from "./components/Home";
-import "./index.css";
 import NavBar from "./components/NavBar";
 import Stations from "./components/stations/Stations";
+import "./index.css";
 
 function App() {
   const router = createBrowserRouter(

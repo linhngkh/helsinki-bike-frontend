@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "./styled/ButtonStyled";
-import { Link, NavLink } from "react-router-dom";
+import { Button } from "./styled/Styled";
+import { Link } from "react-router-dom";
 
 const BigContainer = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ const ButtonContainer = styled.div`
 
 const ButtonGroup = styled(Button)`
   color: white;
-
+  margin-left: 15px;
   &:hover {
     background-color: #b45309;
   }

@@ -1,26 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Button } from "./styled/ButtonStyled";
+import { Button } from "./styled/Styled";
 
 const NavBarContainer = styled.div`
   position: sticky;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 70px;
-  margin: 0 auto;
-  background-color: white;
+  margin: 10px auto;
+  background-color: transparent;
 `;
 
-const Logo = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+const Logo = styled.div``;
 
 const LogoImage = styled.img`
-  border-radius: 50%;
   width: 60px;
 `;
 const Text = styled.h5`
@@ -46,8 +41,8 @@ const TextTitle = styled(Text)`
 `;
 
 const NavButton = styled(Button)`
-  background-color: white;
-  padding: 5px 10px;
+  background-color: transparent;
+
   &:hover {
     background-color: #ff7b00;
   }
@@ -56,18 +51,16 @@ const NavButton = styled(Button)`
 const NavBar = () => {
   return (
     <NavBarContainer>
-      <Logo>
-        <LogoImage src="https://m.media-amazon.com/images/I/51-G-vCgr2L.png" />
-        <Link to="/" style={{ textDecoration: "none" }}>
-          <TextTitle>CITYBIKES</TextTitle>
-        </Link>
-      </Logo>
-
       <Link to="/journeys" style={{ textDecoration: "none" }}>
         <NavButton>
           <Text>Journeys</Text>
         </NavButton>
       </Link>
+      <Logo>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <LogoImage src="https://m.media-amazon.com/images/I/51-G-vCgr2L.png" />
+        </Link>
+      </Logo>
       <Link to="/stations" style={{ textDecoration: "none" }}>
         <NavButton>
           <Text>Stations</Text>
