@@ -1,14 +1,14 @@
 import React from "react";
 import { useGlobalContext } from "../../contextAPI/context";
 import styled from "styled-components";
-const Container = styled.div``;
+import Station from "./Station";
+import Loading from "../utils/Loading";
 
 const Stations = () => {
-  const { loading, showStations, setShowStations } = useGlobalContext();
+  const { loading, stations, setStations } = useGlobalContext();
   if (loading) return <Loading />;
 
-
-  return (<Container>Stations</Container>);
+  return <Station />;
 };
 
 export default Stations;

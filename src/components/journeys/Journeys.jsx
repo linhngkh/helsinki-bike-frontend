@@ -1,14 +1,14 @@
 import React from "react";
 import { useGlobalContext } from "../../contextAPI/context";
-import styled from "styled-components";
+import Journey from "./Journey";
 import Loading from "../utils/Loading";
-const Container = styled.div``;
+
 const Journeys = () => {
-  const { loading, showJourney, setShowJourney } = useGlobalContext();
+  const { loading, data } = useGlobalContext();
 
   if (loading) return <Loading />;
 
-  return <Container></Container>;
+  return <Journey data={data} />;
 };
 
 export default Journeys;
