@@ -5,6 +5,7 @@ import { TablePagination, TableContainer, Table, Paper } from "@mui/material";
 import TableBody from "@mui/material/TableBody";
 import TableRow from "@mui/material/TableRow";
 import TableCell from "@mui/material/TableCell";
+
 const TableStations = ({ stations }) => {
   const [orderDirection, setOrderDirection] = useState("asc");
   const [orderValueBy, setOrderValueBy] = useState("id");
@@ -32,11 +33,7 @@ const TableStations = ({ stations }) => {
       }}
     >
       <TableContainer sx={{ maxHeight: 440 }}>
-        <Table
-          stickyHeader
-          aria-label="sticky table"
-          sx={{ verticalAlign: "start" }}
-        >
+        <Table stickyHeader aria-label="sticky table">
           <StationsHeader
             orderValueBy={orderValueBy}
             orderDirection={orderDirection}
@@ -45,18 +42,18 @@ const TableStations = ({ stations }) => {
           <TableBody>
             {stations
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((station) => {
+              .map((station, _index) => {
                 return (
                   <TableRow
                     hover
                     role="checkbox"
                     tabIndex={-1}
-                    key={station.code}
+                    key={station._index}
                   >
                     {columns.map((column) => {
                       const value = station[column.id];
                       return (
-                        <TableCell key={station.id} align={station.align}>
+                        <TableCell key={station.index} align={station.align}>
                           {column.format && typeof value === "number"
                             ? column.format(value)
                             : value}
@@ -70,7 +67,7 @@ const TableStations = ({ stations }) => {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[10, 30, 100]}
         component="div"
         count={stations.length}
         rowsPerPage={rowsPerPage}

@@ -3,7 +3,6 @@ import { useQuery } from "react-query";
 import { fetchJourney } from "../../api/axios";
 import TableJourney from "./TableJourney";
 import Loading from "../utils/Loading";
-import PaginationButton from "../utils/PaginationButton";
 
 const Journeys = () => {
   const [page, setPage] = useState(0);

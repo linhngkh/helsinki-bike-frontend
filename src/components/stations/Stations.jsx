@@ -4,7 +4,6 @@ import { useQuery } from "react-query";
 import styled from "styled-components";
 
 import Loading from "../utils/Loading";
-import PaginationButton from "../utils/PaginationButton";
 import TableStations from "./TableStations";
 
 const Stations = () => {
@@ -27,7 +26,6 @@ const Stations = () => {
   return (
     <>
       {isFetching && <Loading />}
-
       <TableStations stations={stations} />
     </>
   );
