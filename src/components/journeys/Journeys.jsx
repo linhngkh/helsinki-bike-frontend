@@ -51,8 +51,8 @@ const Journeys = () => {
   return (
     <>
       {isFetching && <Loading />}
-      {journeys.map((journey, index) => (
-        <TableJourney key={index.id} journey={journey} />
+      {journeys.map((journey, _index) => (
+        <TableJourney key={_index} journey={journey} />
       ))}
       {nav}
     </>

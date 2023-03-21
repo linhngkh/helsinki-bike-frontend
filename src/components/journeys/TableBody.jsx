@@ -11,13 +11,15 @@ const JourneyBody = ({ journey }) => {
   } = journey;
   return (
     <TableBody>
-      <TableRow hover role="checkbox" tabIndex={-1}>
+      <TableRow hover role="checkbox" tabIndex={-1} sx={{}}>
         <TableCell component="th" scope="row">
           {Departure_station_name}
         </TableCell>
         <TableCell>{Return_station_name}</TableCell>
-        <TableCell align="right">{Covered_distance}</TableCell>
-        <TableCell align="right">{Duration}</TableCell>
+        <TableCell align="right">
+          {(Covered_distance / 1000).toFixed(1)}
+        </TableCell>
+        <TableCell align="right">{(Duration / 60).toFixed(1)}</TableCell>
       </TableRow>
     </TableBody>
   );

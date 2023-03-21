@@ -3,21 +3,19 @@ import React from "react";
 import { TableSortLabel, TableHead, TableRow, TableCell } from "@mui/material";
 
 export const columns = [
-  { id: "id", label: "Name", minWidth: 170 },
-  { id: "return", label: "Return", minWidth: 100 },
+  { id: "Nimi", label: "Name", minWidth: 170 },
+  { id: "Osoite", label: "Address", minWidth: 100 },
   {
-    id: "distance",
-    label: "Distance(kilometers)",
+    id: "Kaupunki",
+    label: "City",
     minWidth: 170,
     align: "right",
-    format: (value) => (value / 1000).toFixed(1),
   },
   {
-    id: "duration",
-    label: "Duration(minutes)",
+    id: "Kapasiteet",
+    label: "Capacity",
     minWidth: 170,
     align: "right",
-    format: (value) => (value / 60).toFixed(1),
   },
 ];
 const StationsHeader = (props) => {
@@ -28,7 +26,7 @@ const StationsHeader = (props) => {
   };
 
   return (
-    <TableHead>
+    <TableHead >
       <TableRow>
         {columns.map((column) => (
           <TableCell

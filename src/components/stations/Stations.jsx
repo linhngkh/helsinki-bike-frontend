@@ -52,11 +52,11 @@ const Stations = () => {
 
   return (
     <>
+      {nav}
       {isFetching && <Loading />}
       {stations.map((station, index) => (
-        <TableStations key={index.id} station={station} />
+        <TableStations key={index} station={station} />
       ))}
-      {nav}
     </>
   );
 };

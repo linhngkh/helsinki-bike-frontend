@@ -18,9 +18,19 @@ const TableStations = ({ station }) => {
   };
 
   return (
-    <Paper sx={{ width: "70%", overflow: "hidden", margin: "0 auto" }}>
+    <Paper
+      sx={{
+        width: "70%",
+        overflow: "hidden",
+        margin: "0 auto",
+      }}
+    >
       <TableContainer sx={{ maxHeight: 440 }}>
-        <Table stickyHeader aria-label="sticky table">
+        <Table
+          stickyHeader
+          aria-label="sticky table"
+          sx={{ verticalAlign: "start" }}
+        >
           <StationsHeader
             orderValueBy={orderValueBy}
             orderDirection={orderDirection}
