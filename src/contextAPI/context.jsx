@@ -10,21 +10,21 @@ const AppProvider = ({ children }) => {
 
   //fetch all journeys
   useEffect(() => {
-    const fetchJourney = async (pageParam = 0) => {
+    const fetchJourney = async () => {
       setLoading(true);
       try {
-        const { data } = await axios.get(
-          "https://basir.github.io/products.json"
-        );
-        console.log(data);
-        setJourneys(data);
-
-        setLoading(false);
+        const response = await axios.get("http://localhost:8080/api/journeys");
+        if (response) {
+          const journeys = response.data;
+          console.log("journeys", journeys);
+          setJourneys(journeys);
+        } else {
+          setJourneys([]);
+        }
       } catch (error) {
-        setJourneys([]);
         console.log(error);
-        setLoading(false);
       }
+      setLoading(false);
     };
     fetchJourney();
   }, []);

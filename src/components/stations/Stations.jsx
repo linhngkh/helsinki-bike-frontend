@@ -1,7 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "../../contextAPI/context";
 import styled from "styled-components";
-import Station from "./Station";
+
 import Loading from "../utils/Loading";
 
 const Stations = () => {
