@@ -37,8 +37,10 @@ const ButtonContainer = styled.div`
 const ButtonGroup = styled(Button)`
   color: white;
   margin-left: 15px;
+
   &:hover {
     background-color: #b45309;
+    
   }
 `;
 

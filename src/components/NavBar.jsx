@@ -9,8 +9,9 @@ const NavBarContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 70px;
-  margin: 10px auto;
+  margin: 15px auto;
   background-color: transparent;
+  gap: 10px;
 `;
 
 const Logo = styled.div``;
@@ -29,22 +30,17 @@ const Text = styled.h5`
   }
 
   &:hover {
-    color: white;
-  }
-`;
-
-const TextTitle = styled(Text)`
-  fontsize: "25px";
-  &:hover {
     color: black;
   }
 `;
 
 const NavButton = styled(Button)`
   background-color: transparent;
-
+  border: none;
   &:hover {
-    background-color: #ff7b00;
+    border-radius: 7px;
+    border: 5px solid transparent;
+    mask-composite: exclude;
   }
 `;
 
