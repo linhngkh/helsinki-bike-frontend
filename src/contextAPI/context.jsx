@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState, useMemo } from "react";
 import axios from "axios";
-const AppContext = React.createContext();
 
-const BASE_URL = "http://localhost:8080/api";
+const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
