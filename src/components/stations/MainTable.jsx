@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { columns } from "./TableHeader";
-import TableHeader from "./TableHeader";
-import AppBar from "@mui/material/AppBar";
+import TableHeader, { columns } from "./TableHeader";
+
 import SearchIcon from "@mui/icons-material/Search";
-import InputBase from "@mui/material/InputBase";
 import {
   TableBody,
   Table,
@@ -12,6 +10,9 @@ import {
   TableContainer,
   Paper,
   TablePagination,
+  Box,
+  AppBar,
+  InputBase,
 } from "@mui/material";
 
 // condition when "b" in order bigger than "a" in order then return 1 and vice versa
@@ -78,15 +79,19 @@ const MainTable = ({ stations }) => {
         margin: "0 auto",
       }}
     >
-      <AppBar position="static">
-        <SearchIcon />
-
-        <InputBase
-          placeholder="Search…"
-          inputProps={{ "aria-label": "Search ..." }}
-          onChange={(e) => setSearch(e.target.value)}
-          color="white"
-        />
+      <AppBar position="static" sx={{ background: "black" }}>
+        <Box
+          component="span"
+          sx={{ display: "flex", alignItems: "center", marginLeft: "10px" }}
+        >
+          <SearchIcon />
+          <InputBase
+            placeholder="Search by typing station name"
+            inputProps={{ "aria-label": "search" }}
+            onChange={(e) => setSearch(e.target.value)}
+            sx={{ color: "white", padding: "10px", width: "20rem" }}
+          />
+        </Box>
       </AppBar>
       <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
         <Table stickyHeader aria-label="sticky table">
