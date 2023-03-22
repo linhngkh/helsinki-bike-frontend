@@ -79,6 +79,7 @@ const MainTable = ({ stations }) => {
         margin: "0 auto",
       }}
     >
+      {/* SEARCH BAR */}
       <AppBar position="static" sx={{ background: "black" }}>
         <Box
           component="span"
@@ -93,6 +94,7 @@ const MainTable = ({ stations }) => {
           />
         </Box>
       </AppBar>
+      {/* TABLE */}
       <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHeader
@@ -135,6 +137,7 @@ const MainTable = ({ stations }) => {
           </TableBody>
         </Table>
       </TableContainer>
+      {/* PAGINATION */}
       <TablePagination
         rowsPerPageOptions={[10, 30, 100]}
         component="div"

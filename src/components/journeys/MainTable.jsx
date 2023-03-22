@@ -79,6 +79,7 @@ const MainTable = ({ journeys }) => {
         margin: "0 auto",
       }}
     >
+      {/* SEARCH BAR */}
       <AppBar position="static" sx={{ background: "black" }}>
         <Box
           component="span"
@@ -86,13 +87,14 @@ const MainTable = ({ journeys }) => {
         >
           <DirectionsBikeIcon />
           <InputBase
-            placeholder="Search by typing station name "
+            placeholder="Search by typing journey name "
             inputProps={{ "aria-label": "search" }}
             onChange={(e) => setSearch(e.target.value)}
             sx={{ color: "white", padding: "10px", width: "20rem" }}
           />
         </Box>
       </AppBar>
+      {/* TABLE */}
       <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHeader
@@ -135,6 +137,7 @@ const MainTable = ({ journeys }) => {
           </TableBody>
         </Table>
       </TableContainer>
+      {/* PAGINATION */}
       <TablePagination
         rowsPerPageOptions={[20, 50, 100]}
         component="div"
