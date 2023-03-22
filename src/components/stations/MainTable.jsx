@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { columns } from "./TableHeader";
 import TableHeader from "./TableHeader";
+import AppBar from "@mui/material/AppBar";
+import SearchIcon from "@mui/icons-material/Search";
+import InputBase from "@mui/material/InputBase";
 import {
   TableBody,
   Table,
@@ -42,10 +45,14 @@ const sortedRowInformation = (rowArray, comparator) => {
 };
 
 const MainTable = ({ stations }) => {
+  // states for sorting asc and desc
   const [orderDirection, setOrderDirection] = useState("asc");
   const [valueToOrderBy, setValueToOrderBy] = useState("id");
+  // states for pagination
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [page, setPage] = useState(0);
+  // state for search name
+  const [search, setSearch] = useState("");
 
   // sorting function
   const handleSorting = (event, property) => {
@@ -71,6 +78,16 @@ const MainTable = ({ stations }) => {
         margin: "0 auto",
       }}
     >
+      <AppBar position="static">
+        <SearchIcon />
+
+        <InputBase
+          placeholder="Search…"
+          inputProps={{ "aria-label": "Search ..." }}
+          onChange={(e) => setSearch(e.target.value)}
+          color="white"
+        />
+      </AppBar>
       <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHeader
@@ -83,6 +100,11 @@ const MainTable = ({ stations }) => {
               stations,
               getComparator(orderDirection, valueToOrderBy)
             )
+              .filter((item) => {
+                return search.toLowerCase() === ""
+                  ? item
+                  : item.Nimi.toLowerCase().includes(search);
+              })
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((station, _index) => {
                 return (
