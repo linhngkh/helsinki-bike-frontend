@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button } from "./styled/Styled";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
+import { container, linkitem } from "./utils/Animations";
 
 const BigContainer = styled.div`
   display: flex;
@@ -26,7 +27,7 @@ const Title = styled.h1`
   font-size: 60px;
   font-weight: bold;
   letter-spacing: 16px;
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 1px white;
 `;
 
 const ButtonContainer = styled.div`
@@ -54,14 +55,24 @@ const LandingPage = () => {
     >
       <BigContainer>
         <Container>
-          <Title>HELSINKI CITY BIKES </Title>
+          <m.div
+            animate={{ x: 0 }}
+            initial={{ x: "100%" }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+          >
+            <Title>HELSINKI CITY BIKES </Title>
+          </m.div>
+
           <ButtonContainer>
-            <Link to="/journeys">
-              <ButtonGroup>VIEW JOURNEYS</ButtonGroup>
-            </Link>
-            <Link to="/stations">
-              <ButtonGroup>VIEW STATIONS</ButtonGroup>
-            </Link>
+            <ul variants={container} initial="hidden" animate="show">
+              {" "}
+              <Link to="/journeys">
+                <ButtonGroup>VIEW JOURNEYS</ButtonGroup>
+              </Link>
+              <Link to="/stations">
+                <ButtonGroup>VIEW STATIONS</ButtonGroup>
+              </Link>
+            </ul>
           </ButtonContainer>
         </Container>
       </BigContainer>
