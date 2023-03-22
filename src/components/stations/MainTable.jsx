@@ -110,7 +110,8 @@ const MainTable = ({ stations }) => {
               .filter((item) => {
                 return search.toLowerCase() === ""
                   ? item
-                  : item.Nimi.toLowerCase().includes(search);
+                  : item.Nimi.toLowerCase().includes(search) ||
+                      item.Osoite.toLowerCase().includes(search);
               })
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((station, _index) => {
