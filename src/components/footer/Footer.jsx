@@ -20,7 +20,7 @@ const Anchor = styled.a`
 const Footer = () => {
   return (
     <FooterContainer>
-      <Text>&#169; 2023 Linh Nguyen - From Code With Love</Text>
+      <Text>&#169; 2023 Linh Nguyen - Dear code with love!</Text>
       <Anchor
         href="https://github.com/linh-nguyenkhanh/helsinki-bike-frontend"
         target="_blank"

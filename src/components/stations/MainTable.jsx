@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { columns } from "./TableHeader";
 import TableHeader from "./TableHeader";
-import { TableBody, Table, TableRow, TableCell } from "@mui/material";
+import {
+  TableBody,
+  Table,
+  TableRow,
+  TableCell,
+  TableContainer,
+  Paper,
+  TablePagination,
+} from "@mui/material";
 
 const descendingComparator = (a, b, orderBy) => {
   if (b[orderBy] < a[orderBy]) {
@@ -55,54 +63,61 @@ const MainTable = ({ stations }) => {
     setPage(0);
   };
   return (
-    <Table stickyHeader aria-label="sticky table">
-      <TableHeader
-        orderValueBy={orderValueBy}
-        orderDirection={orderDirection}
-        handleSorting={handleSorting}
+    <Paper
+      sx={{
+        width: "55%",
+        overflow: "hidden",
+        margin: "0 auto",
+      }}
+    >
+      <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
+        <Table stickyHeader aria-label="sticky table">
+          <TableHeader
+            orderValueBy={orderValueBy}
+            orderDirection={orderDirection}
+            handleSorting={handleSorting}
+          />
+          <TableBody>
+            {sortedRowInformation(
+              stations,
+              getComparator(orderDirection, orderValueBy)
+            )
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((station, _index) => {
+                return (
+                  <TableRow
+                    hover
+                    role="checkbox"
+                    tabIndex={-1}
+                    key={station._index}
+                  >
+                    {columns.map((column) => {
+                      const value = station[column.id];
+                      return (
+                        <TableCell key={station._index} sx={{}}>
+                          {column.format && typeof value === "number"
+                            ? column.format(value)
+                            : value}
+                        </TableCell>
+                      );
+                    })}
+                  </TableRow>
+                );
+              })}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      <TablePagination
+        rowsPerPageOptions={[10, 30, 100]}
+        component="div"
+        count={stations.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
       />
-      <TableBody>
-        {sortedRowInformation(
-          stations,
-          getComparator(orderDirection, orderValueBy)
-        )
-          .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-          .map((station, _index) => {
-            return (
-              <TableRow
-                hover
-                role="checkbox"
-                tabIndex={-1}
-                key={station._index}
-              >
-                {columns.map((column) => {
-                  const value = station[column.id];
-                  return (
-                    <TableCell key={station._index} sx={{}}>
-                      {column.format && typeof value === "number"
-                        ? column.format(value)
-                        : value}
-                    </TableCell>
-                  );
-                })}
-              </TableRow>
-            );
-          })}
-      </TableBody>
-    </Table>
+    </Paper>
   );
-  {
-    /* PAGINATION */
-  }
-  // <TablePagination
-  //   rowsPerPageOptions={[10, 30, 100]}
-  //   component="div"
-  //   count={stations.length}
-  //   rowsPerPage={rowsPerPage}
-  //   page={page}
-  //   onPageChange={handleChangePage}
-  //   onRowsPerPageChange={handleChangeRowsPerPage}
-  // />
 };
 
 export default MainTable;
