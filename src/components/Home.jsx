@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import { container } from "./utils/Animations";
 import Footer from "./footer/Footer";
+
 const BigContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -12,7 +13,7 @@ const BigContainer = styled.div`
   align-items: center;
   min-height: 90vh;
   margin: 0 auto;
-  background-image: url("/public/assets/bd.jpeg");
+  background-image: url("/assets/bg.jpeg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
