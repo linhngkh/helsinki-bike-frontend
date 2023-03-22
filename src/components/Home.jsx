@@ -16,6 +16,8 @@ const BigContainer = styled.div`
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: top;
 `;
 
 const Container = styled.div`
