@@ -87,7 +87,7 @@ const MainTable = ({ stations }) => {
         >
           <DirectionsBikeIcon />
           <InputBase
-            placeholder="Search by typing station name "
+            placeholder="Search by typing name or address"
             inputProps={{ "aria-label": "search" }}
             onChange={(e) => setSearch(e.target.value)}
             sx={{ color: "white", padding: "10px", width: "20rem" }}
