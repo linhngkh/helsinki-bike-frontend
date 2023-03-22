@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TableHeader, { columns } from "./TableHeader";
+import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 
-import SearchIcon from "@mui/icons-material/Search";
 import {
   TableBody,
   Table,
@@ -84,9 +84,9 @@ const MainTable = ({ stations }) => {
           component="span"
           sx={{ display: "flex", alignItems: "center", marginLeft: "10px" }}
         >
-          <SearchIcon />
+          <DirectionsBikeIcon />
           <InputBase
-            placeholder="Search by typing station name"
+            placeholder="Search by typing station name "
             inputProps={{ "aria-label": "search" }}
             onChange={(e) => setSearch(e.target.value)}
             sx={{ color: "white", padding: "10px", width: "20rem" }}
