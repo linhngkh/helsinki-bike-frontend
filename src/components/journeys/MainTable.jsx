@@ -28,7 +28,7 @@ const getComparator = (order, orderBy) => {
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
 };
-
+// map element array in order
 const sortedRowInformation = (rowArray, comparator) => {
   const stablizedRowArray = rowArray.map((el, index) => [el, index]);
   stablizedRowArray.sort((a, b) => {
@@ -49,8 +49,8 @@ const MainTable = ({ journeys }) => {
 
   // sorting function
   const handleSorting = (event, property) => {
-    const isAscending = orderValueBy === property && orderDirection === "asc";
-    setOrderValueBy(property);
+    const isAscending = valueToOrderBy === property && orderDirection === "asc";
+    setValueToOrderBy(property);
     setOrderDirection(isAscending ? "desc" : "asc");
   };
 

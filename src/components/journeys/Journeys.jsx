@@ -14,17 +14,24 @@ const Journeys = () => {
     error,
     data: journeys,
     isFetching,
-  } = useQuery(["journeys", page], () => fetchJourney(page), {
-    keepPreviousData: true,
-  });
+  } = useQuery(["journeys", page], () => fetchJourney(page));
 
-  if (isLoading) return <Loading />;
+  if (isLoading)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
 
   if (isError) return <p>Error: {error.message}</p>;
 
   return (
     <Container>
-      {isFetching && <Loading />}
+      {isFetching && (
+        <div>
+          <Loading />
+        </div>
+      )}
       <MainTable journeys={journeys} />
     </Container>
   );

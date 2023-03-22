@@ -14,9 +14,14 @@ const Stations = () => {
     error,
     data: stations,
     isFetching,
-  } = useQuery(["stations", page], () => fetchStation(page), {});
+  } = useQuery(["stations", page], () => fetchStation(page));
 
-  if (isLoading) return <Loading />;
+  if (isLoading)
+    return (
+      <div>
+        <Loading />
+      </div>
+    );
 
   if (isError) return <p>Error: {error.message}</p>;
 

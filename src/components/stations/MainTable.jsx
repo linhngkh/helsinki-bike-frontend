@@ -28,7 +28,7 @@ const getComparator = (order, orderBy) => {
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
 };
-
+// map element array in order
 const sortedRowInformation = (rowArray, comparator) => {
   const stablizedRowArray = rowArray.map((el, index) => [el, index]);
   stablizedRowArray.sort((a, b) => {
@@ -96,7 +96,7 @@ const MainTable = ({ stations }) => {
                       const value = station[column.id];
                       return (
                         <TableCell key={station._index}>
-                          {column.format && typeof value === "value"
+                          {column.format && typeof value === "number"
                             ? column.format(value)
                             : value}
                         </TableCell>
