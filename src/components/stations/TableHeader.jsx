@@ -3,17 +3,19 @@ import React from "react";
 import { TableSortLabel, TableHead, TableRow, TableCell } from "@mui/material";
 
 export const columns = [
-  { id: "Nimi", label: "Name", minWidth: 170 },
-  { id: "Osoite", label: "Address", minWidth: 100 },
+  { id: "Nimi", name: "Name", minWidth: 170 },
+  { id: "Osoite", name: "Address", minWidth: 100 },
   {
     id: "Kapasiteet",
-    label: "Capacity",
+    name: "Capacity",
     minWidth: 170,
   },
 ];
 const TableHeader = (props) => {
-  const { orderDirection, orderValueBy, handleSorting } = props;
+  // receive props from main table
+  const { orderDirection, valueToOrderBy, handleSorting } = props;
 
+  // sorting event
   const createHandleSorting = (property) => (event) => {
     handleSorting(event, property);
   };
@@ -30,14 +32,17 @@ const TableHeader = (props) => {
               fontWeight: "bold",
             }}
           >
+            {/* <TableSortLabel
+              active={orderBy === headCell.id}
+              direction={orderBy === headCell.id ? order : 'asc'}
+              onClick={createSortHandler(headCell.id)}
+            ></TableSortLabel> */}
             <TableSortLabel
-              active={orderValueBy === "column.id"}
-              direction={
-                orderDirection == "column.label" ? orderDirection : "asc"
-              }
-              onClick={createHandleSorting}
+              active={valueToOrderBy === column.id}
+              direction={orderDirection == column.name ? order : "desc"}
+              onClick={createHandleSorting(column.id)}
             >
-              {column.label}
+              {column.name}
             </TableSortLabel>
           </TableCell>
         ))}

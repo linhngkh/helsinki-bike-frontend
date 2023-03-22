@@ -43,15 +43,14 @@ const sortedRowInformation = (rowArray, comparator) => {
 
 const MainTable = ({ stations }) => {
   const [orderDirection, setOrderDirection] = useState("asc");
-  const [orderValueBy, setOrderValueBy] = useState("id");
+  const [valueToOrderBy, setValueToOrderBy] = useState("id");
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [page, setPage] = useState(0);
 
   // sorting function
-
   const handleSorting = (event, property) => {
-    const isAscending = orderValueBy === property && orderDirection === "asc";
-    setOrderValueBy(property);
+    const isAscending = valueToOrderBy === property && orderDirection === "asc";
+    setValueToOrderBy(property);
     setOrderDirection(isAscending ? "desc" : "asc");
   };
 
@@ -75,14 +74,14 @@ const MainTable = ({ stations }) => {
       <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHeader
-            orderValueBy={orderValueBy}
+            valueToOrderBy={valueToOrderBy}
             orderDirection={orderDirection}
             handleSorting={handleSorting}
           />
           <TableBody>
             {sortedRowInformation(
               stations,
-              getComparator(orderDirection, orderValueBy)
+              getComparator(orderDirection, valueToOrderBy)
             )
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((station, _index) => {
@@ -97,7 +96,7 @@ const MainTable = ({ stations }) => {
                       const value = station[column.id];
                       return (
                         <TableCell key={station._index} sx={{}}>
-                          {column.format && typeof value === "number"
+                          {column.format && typeof value === "value"
                             ? column.format(value)
                             : value}
                         </TableCell>
