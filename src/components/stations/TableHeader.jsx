@@ -32,14 +32,9 @@ const TableHeader = (props) => {
               fontWeight: "bold",
             }}
           >
-            {/* <TableSortLabel
-              active={orderBy === headCell.id}
-              direction={orderBy === headCell.id ? order : 'asc'}
-              onClick={createSortHandler(headCell.id)}
-            ></TableSortLabel> */}
             <TableSortLabel
               active={valueToOrderBy === column.id}
-              direction={orderDirection == column.name ? order : "desc"}
+              direction={orderDirection == column.name ? order : "asc"}
               onClick={createHandleSorting(column.id)}
             >
               {column.name}

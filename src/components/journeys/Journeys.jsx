@@ -3,6 +3,7 @@ import { useQuery } from "react-query";
 import { fetchJourney } from "../../api/axios";
 import MainTable from "././MainTable";
 import Loading from "../utils/Loading";
+import { Container } from "../utils/Styled";
 
 const Journeys = () => {
   const [page, setPage] = useState(0);
@@ -22,10 +23,10 @@ const Journeys = () => {
   if (isError) return <p>Error: {error.message}</p>;
 
   return (
-    <>
+    <Container>
       {isFetching && <Loading />}
       <MainTable journeys={journeys} />
-    </>
+    </Container>
   );
 };
 

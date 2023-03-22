@@ -12,4 +12,5 @@ html {
 body {
   background-color: #ffba00;
   font-family: "Righteous", cursive;
+  min-height: 100vh;
 }

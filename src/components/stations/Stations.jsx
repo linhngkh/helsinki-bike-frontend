@@ -3,6 +3,7 @@ import { fetchStation } from "../../api/axios";
 import { useQuery } from "react-query";
 import Loading from "../utils/Loading";
 import MainTable from "././MainTable";
+import { Container } from "../utils/Styled";
 
 const Stations = () => {
   const [page, setPage] = useState(0);
@@ -16,10 +17,19 @@ const Stations = () => {
   } = useQuery(["stations", page], () => fetchStation(page), {});
 
   if (isLoading) return <Loading />;
-  if (isFetching) return <Loading />;
+
   if (isError) return <p>Error: {error.message}</p>;
 
-  return <MainTable stations={stations} />;
+  return (
+    <Container>
+      {isFetching && (
+        <div>
+          <Loading />
+        </div>
+      )}
+      <MainTable stations={stations} />
+    </Container>
+  );
 };
 
 export default Stations;

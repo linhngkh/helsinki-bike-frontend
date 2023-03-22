@@ -11,3 +11,12 @@ export const Button = styled.button`
   letter-spacing: 2px;
   font-family: "Righteous", cursive;
 `;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  margin: 0 auto;
+`;

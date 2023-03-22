@@ -66,7 +66,7 @@ const MainTable = ({ stations }) => {
   return (
     <Paper
       sx={{
-        width: "55%",
+        width: "50%",
         overflow: "hidden",
         margin: "0 auto",
       }}

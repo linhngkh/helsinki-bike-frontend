@@ -9,6 +9,7 @@ const FooterContainer = styled.div`
   align-items: center;
   width: 0 auto;
   height: 50px;
+  margin-top: auto;
 `;
 const Text = styled.p``;
 const Anchor = styled.a`

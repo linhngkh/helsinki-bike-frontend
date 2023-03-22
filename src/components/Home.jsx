@@ -4,7 +4,7 @@ import { Button } from "./utils/Styled";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import { container } from "./utils/Animations";
-
+import Footer from "./footer/Footer";
 const BigContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -78,6 +78,7 @@ const LandingPage = () => {
           </ButtonContainer>
         </Container>
       </BigContainer>
+      <Footer />
     </m.div>
   );
 };

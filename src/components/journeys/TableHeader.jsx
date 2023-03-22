@@ -41,11 +41,11 @@ const JourneyHeader = (props) => {
             }}
           >
             <TableSortLabel
-              active={orderValueBy === "column.id"}
+              active={orderValueBy === column.id}
               direction={
-                orderDirection == "column.label" ? orderDirection : "asc"
+                orderDirection == column.label ? orderDirection : "asc"
               }
-              onClick={createHandleSorting}
+              onClick={createHandleSorting(column.id)}
             >
               {column.label}
             </TableSortLabel>

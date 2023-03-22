@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Skeleton } from "@mui/material";
 const Container = styled.div`
             display: "flex";
             align-items: "center":
@@ -10,7 +10,17 @@ const Container = styled.div`
 const Loading = () => {
   return (
     <Container>
-      <h2>Loading station... Please wait for a moment...⏳ </h2>
+      <Skeleton
+        variant="rectangular"
+        width={"70%"}
+        height={500}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          margin: "0 auto",
+        }}
+      />
     </Container>
   );
 };

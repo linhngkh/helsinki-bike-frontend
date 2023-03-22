@@ -9,7 +9,6 @@ import Journeys from "./components/journeys/Journeys";
 import Home from "./components/Home";
 import NavBar from "./components/navbar/NavBar";
 import Stations from "./components/stations/Stations";
-import Footer from "./components/footer/Footer";
 import "./index.css";
 
 function App() {
@@ -37,7 +36,6 @@ const Root = () => {
       <div>
         <Outlet />
       </div>
-      <Footer />
     </>
   );
 };
