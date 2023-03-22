@@ -5,11 +5,6 @@ import { TableSortLabel, TableHead, TableRow, TableCell } from "@mui/material";
 export const columns = [
   { id: "Nimi", name: "Name", minWidth: 100 },
   { id: "Osoite", name: "Address", minWidth: 100 },
-  {
-    id: "Kapasiteet",
-    name: "Capacity",
-    minWidth: 100,
-  },
 ];
 const TableHeader = (props) => {
   // receive props from main table

@@ -12,6 +12,7 @@ import {
   Box,
   AppBar,
   InputBase,
+  Typography,
 } from "@mui/material";
 
 // condition when "b" in order bigger than "a" in order then return 1 and vice versa
@@ -74,7 +75,7 @@ const MainTable = ({ journeys }) => {
   return (
     <Paper
       sx={{
-        width: "65%",
+        width: "55%",
         overflow: "hidden",
         margin: "0 auto",
       }}
@@ -83,7 +84,11 @@ const MainTable = ({ journeys }) => {
       <AppBar position="static" sx={{ background: "black" }}>
         <Box
           component="span"
-          sx={{ display: "flex", alignItems: "center", marginLeft: "10px" }}
+          sx={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+          }}
         >
           <DirectionsBikeIcon />
           <InputBase
@@ -92,6 +97,14 @@ const MainTable = ({ journeys }) => {
             onChange={(e) => setSearch(e.target.value)}
             sx={{ color: "white", padding: "10px", width: "20rem" }}
           />
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ display: { xs: "none", sm: "block" } }}
+          >
+            JOURNEYS
+          </Typography>
         </Box>
       </AppBar>
       {/* TABLE */}

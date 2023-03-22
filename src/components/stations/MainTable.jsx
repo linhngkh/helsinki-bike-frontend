@@ -3,6 +3,7 @@ import TableHeader, { columns } from "./TableHeader";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 
 import {
+  Typography,
   TableBody,
   Table,
   TableRow,
@@ -74,7 +75,7 @@ const MainTable = ({ stations }) => {
   return (
     <Paper
       sx={{
-        width: "50%",
+        width: "40%",
         overflow: "hidden",
         margin: "0 auto",
       }}
@@ -92,6 +93,14 @@ const MainTable = ({ stations }) => {
             onChange={(e) => setSearch(e.target.value)}
             sx={{ color: "white", padding: "10px", width: "20rem" }}
           />
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ display: { xs: "none", sm: "block" } }}
+          >
+            STATIONS
+          </Typography>
         </Box>
       </AppBar>
       {/* TABLE */}
