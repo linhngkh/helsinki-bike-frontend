@@ -11,7 +11,7 @@ export const columns = [
     minWidth: 170,
   },
 ];
-const StationsHeader = (props) => {
+const TableHeader = (props) => {
   const { orderDirection, orderValueBy, handleSorting } = props;
 
   const createHandleSorting = (property) => (event) => {
@@ -24,7 +24,6 @@ const StationsHeader = (props) => {
         {columns.map((column) => (
           <TableCell
             key={column.id}
-            align={column.align}
             style={{
               minWidth: column.minWidth,
               fontSize: "20px",
@@ -47,4 +46,4 @@ const StationsHeader = (props) => {
   );
 };
 
-export default StationsHeader;
+export default TableHeader;
