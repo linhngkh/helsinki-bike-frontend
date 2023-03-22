@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { columns } from "./TableHeader";
-import TableHeader from "./TableHeader";
+import TableHeader, { columns } from "./TableHeader";
+import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import {
   TablePagination,
   TableContainer,
@@ -9,6 +9,9 @@ import {
   TableCell,
   TableBody,
   TableRow,
+  Box,
+  AppBar,
+  InputBase,
 } from "@mui/material";
 
 // condition when "b" in order bigger than "a" in order then return 1 and vice versa
@@ -42,10 +45,15 @@ const sortedRowInformation = (rowArray, comparator) => {
 };
 
 const MainTable = ({ journeys }) => {
+  // states for sorting asc and desc
   const [orderDirection, setOrderDirection] = useState("asc");
   const [valueToOrderBy, setValueToOrderBy] = useState("id");
+  // states for pagination
   const [rowsPerPage, setRowsPerPage] = React.useState(20);
   const [page, setPage] = useState(0);
+
+  // state for search name
+  const [search, setSearch] = useState("");
 
   // sorting function
   const handleSorting = (event, property) => {
@@ -71,6 +79,20 @@ const MainTable = ({ journeys }) => {
         margin: "0 auto",
       }}
     >
+      <AppBar position="static" sx={{ background: "black" }}>
+        <Box
+          component="span"
+          sx={{ display: "flex", alignItems: "center", marginLeft: "10px" }}
+        >
+          <DirectionsBikeIcon />
+          <InputBase
+            placeholder="Search by typing station name "
+            inputProps={{ "aria-label": "search" }}
+            onChange={(e) => setSearch(e.target.value)}
+            sx={{ color: "white", padding: "10px", width: "20rem" }}
+          />
+        </Box>
+      </AppBar>
       <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHeader
@@ -83,6 +105,11 @@ const MainTable = ({ journeys }) => {
               journeys,
               getComparator(orderDirection, valueToOrderBy)
             )
+              .filter((item) => {
+                return search.toLowerCase() === ""
+                  ? item
+                  : item.Nimi.toLowerCase().includes(search);
+              })
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((journey, _id) => {
                 return (
