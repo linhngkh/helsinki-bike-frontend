@@ -11,6 +11,7 @@ import {
   TablePagination,
 } from "@mui/material";
 
+// condition when "b" in order bigger than "a" in order then return 1 and vice versa
 const descendingComparator = (a, b, orderBy) => {
   if (b[orderBy] < a[orderBy]) {
     return -1;
@@ -21,6 +22,7 @@ const descendingComparator = (a, b, orderBy) => {
   return 0;
 };
 
+// condition like a toggle when click on top of the row, return ascending or descending result
 const getComparator = (order, orderBy) => {
   return order === "desc"
     ? (a, b) => descendingComparator(a, b, orderBy)
