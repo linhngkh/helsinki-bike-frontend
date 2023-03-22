@@ -34,7 +34,11 @@ const JourneyHeader = (props) => {
           <TableCell
             key={column.id}
             align={column.align}
-            style={{ minWidth: column.minWidth }}
+            style={{
+              minWidth: column.minWidth,
+              fontSize: "20px",
+              fontWeight: "bold",
+            }}
           >
             <TableSortLabel
               active={orderValueBy === "column.id"}

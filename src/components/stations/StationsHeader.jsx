@@ -6,16 +6,9 @@ export const columns = [
   { id: "Nimi", label: "Name", minWidth: 170 },
   { id: "Osoite", label: "Address", minWidth: 100 },
   {
-    id: "Kaupunki",
-    label: "City",
-    minWidth: 170,
-    align: "right",
-  },
-  {
     id: "Kapasiteet",
     label: "Capacity",
     minWidth: 170,
-    align: "right",
   },
 ];
 const StationsHeader = (props) => {
@@ -26,13 +19,17 @@ const StationsHeader = (props) => {
   };
 
   return (
-    <TableHead >
+    <TableHead>
       <TableRow>
         {columns.map((column) => (
           <TableCell
             key={column.id}
             align={column.align}
-            style={{ minWidth: column.minWidth }}
+            style={{
+              minWidth: column.minWidth,
+              fontSize: "20px",
+              fontWeight: "bold",
+            }}
           >
             <TableSortLabel
               active={orderValueBy === "column.id"}

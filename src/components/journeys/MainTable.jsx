@@ -33,7 +33,7 @@ const TableJourney = ({ journeys }) => {
   return (
     <Paper
       sx={{
-        width: "70%",
+        width: "65%",
         overflow: "hidden",
         margin: "0 auto",
       }}

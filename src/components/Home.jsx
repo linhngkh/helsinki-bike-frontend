@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "./styled/Styled";
+import { Button } from "./utils/Styled";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import { container, linkitem } from "./utils/Animations";
+import { container } from "./utils/Animations";
 
 const BigContainer = styled.div`
   display: flex;
@@ -37,6 +37,8 @@ const ButtonContainer = styled.div`
   margin-top: 20px;
 `;
 
+const Ulist = styled.ul``;
+
 const ButtonGroup = styled(Button)`
   color: white;
   margin-left: 15px;
@@ -64,7 +66,7 @@ const LandingPage = () => {
           </m.div>
 
           <ButtonContainer>
-            <ul variants={container} initial="hidden" animate="show">
+            <Ulist variants={container} initial="hidden" animate="show">
               {" "}
               <Link to="/journeys">
                 <ButtonGroup>VIEW JOURNEYS</ButtonGroup>
@@ -72,7 +74,7 @@ const LandingPage = () => {
               <Link to="/stations">
                 <ButtonGroup>VIEW STATIONS</ButtonGroup>
               </Link>
-            </ul>
+            </Ulist>
           </ButtonContainer>
         </Container>
       </BigContainer>

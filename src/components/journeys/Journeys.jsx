@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { fetchJourney } from "../../api/axios";
-import TableJourney from "./TableJourney";
+import MainTable from "././MainTable";
 import Loading from "../utils/Loading";
 
 const Journeys = () => {
@@ -24,8 +24,7 @@ const Journeys = () => {
   return (
     <>
       {isFetching && <Loading />}
-
-      <TableJourney journeys={journeys} />
+      <MainTable journeys={journeys} />
     </>
   );
 };

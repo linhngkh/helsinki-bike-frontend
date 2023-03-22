@@ -27,12 +27,12 @@ const TableStations = ({ stations }) => {
   return (
     <Paper
       sx={{
-        width: "70%",
+        width: "55%",
         overflow: "hidden",
         margin: "0 auto",
       }}
     >
-      <TableContainer sx={{ maxHeight: 440 }}>
+      <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
         <Table stickyHeader aria-label="sticky table">
           <StationsHeader
             orderValueBy={orderValueBy}
@@ -53,7 +53,7 @@ const TableStations = ({ stations }) => {
                     {columns.map((column) => {
                       const value = station[column.id];
                       return (
-                        <TableCell key={station.index} align={station.align}>
+                        <TableCell key={station.index} sx={{}}>
                           {column.format && typeof value === "number"
                             ? column.format(value)
                             : value}

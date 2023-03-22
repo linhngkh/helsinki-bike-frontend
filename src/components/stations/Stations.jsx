@@ -3,7 +3,7 @@ import { fetchStation } from "../../api/axios";
 import { useQuery } from "react-query";
 
 import Loading from "../utils/Loading";
-import TableStations from "./TableStations";
+import MainTable from "././MainTable";
 
 const Stations = () => {
   const [page, setPage] = useState(0);
@@ -25,7 +25,7 @@ const Stations = () => {
   return (
     <>
       {isFetching && <Loading />}
-      <TableStations stations={stations} />
+      <MainTable stations={stations} />
     </>
   );
 };
