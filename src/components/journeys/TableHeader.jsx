@@ -4,23 +4,23 @@ import { TableSortLabel, TableHead, TableRow, TableCell } from "@mui/material";
 
 export const columns = [
   { id: "id", label: "Departure", minWidth: 170 },
-  { id: "return", label: "Return", minWidth: 100 },
+  { id: "return", label: "Return", minWidth: 170 },
   {
     id: "distance",
     label: "Distance(kilometers)",
-    minWidth: 170,
+    minWidth: 100,
     align: "right",
     format: (value) => (value / 1000).toFixed(1),
   },
   {
     id: "duration",
     label: "Duration(minutes)",
-    minWidth: 170,
+    minWidth: 100,
     align: "right",
     format: (value) => (value / 60).toFixed(1),
   },
 ];
-const JourneyHeader = (props) => {
+const TableHeader = (props) => {
   const { orderDirection, orderValueBy, handleSorting } = props;
 
   const createHandleSorting = (property) => (event) => {
@@ -56,4 +56,4 @@ const JourneyHeader = (props) => {
   );
 };
 
-export default JourneyHeader;
+export default TableHeader;

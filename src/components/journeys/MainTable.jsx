@@ -11,17 +11,50 @@ import {
   TableRow,
 } from "@mui/material";
 
-const TableJourney = ({ journeys }) => {
+// condition when "b" in order bigger than "a" in order then return 1 and vice versa
+const descendingComparator = (a, b, orderBy) => {
+  if (b[orderBy] < a[orderBy]) {
+    return -1;
+  }
+  if (b[orderBy] > a[orderBy]) {
+    return 1;
+  }
+  return 0;
+};
+
+// condition like a toggle when click on top of the row, return ascending or descending result
+const getComparator = (order, orderBy) => {
+  return order === "desc"
+    ? (a, b) => descendingComparator(a, b, orderBy)
+    : (a, b) => -descendingComparator(a, b, orderBy);
+};
+
+const sortedRowInformation = (rowArray, comparator) => {
+  const stablizedRowArray = rowArray.map((el, index) => [el, index]);
+  stablizedRowArray.sort((a, b) => {
+    const order = comparator(a[0], b[0]);
+    if (order !== 0) {
+      return order;
+    }
+    return a[1] - b[1];
+  });
+  return stablizedRowArray.map((el) => el[0]);
+};
+
+const MainTable = ({ journeys }) => {
   const [orderDirection, setOrderDirection] = useState("asc");
-  const [orderValueBy, setOrderValueBy] = useState("id");
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [valueToOrderBy, setValueToOrderBy] = useState("id");
+  const [rowsPerPage, setRowsPerPage] = React.useState(20);
   const [page, setPage] = useState(0);
 
+  // sorting function
   const handleSorting = (event, property) => {
     const isAscending = orderValueBy === property && orderDirection === "asc";
     setOrderValueBy(property);
     setOrderDirection(isAscending ? "desc" : "asc");
   };
+
+  // pagination function
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -38,15 +71,18 @@ const TableJourney = ({ journeys }) => {
         margin: "0 auto",
       }}
     >
-      <TableContainer sx={{ maxHeight: 440 }}>
+      <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHeader
-            orderValueBy={orderValueBy}
+            valueToOrderBy={valueToOrderBy}
             orderDirection={orderDirection}
             handleSorting={handleSorting}
           />
           <TableBody>
-            {journeys
+            {sortedRowInformation(
+              journeys,
+              getComparator(orderDirection, valueToOrderBy)
+            )
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((journey, _id) => {
                 return (
@@ -59,7 +95,7 @@ const TableJourney = ({ journeys }) => {
                     {columns.map((column) => {
                       const value = journey[column.id];
                       return (
-                        <TableCell key={journey.index} align={journey.align}>
+                        <TableCell key={journey.index}>
                           {column.format && typeof value === "number"
                             ? column.format(value)
                             : value}
@@ -73,7 +109,7 @@ const TableJourney = ({ journeys }) => {
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[20, 50, 100]}
         component="div"
         count={journeys.length}
         rowsPerPage={rowsPerPage}
@@ -85,4 +121,4 @@ const TableJourney = ({ journeys }) => {
   );
 };
 
-export default TableJourney;
+export default MainTable;

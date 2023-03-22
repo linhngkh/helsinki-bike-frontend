@@ -95,7 +95,7 @@ const MainTable = ({ stations }) => {
                     {columns.map((column) => {
                       const value = station[column.id];
                       return (
-                        <TableCell key={station._index} sx={{}}>
+                        <TableCell key={station._index}>
                           {column.format && typeof value === "value"
                             ? column.format(value)
                             : value}
