@@ -77,7 +77,7 @@ const MainTable = ({ stations }) => {
       sx={{
         width: "40%",
         overflow: "hidden",
-        margin: "0 auto",
+        margin: "20px auto",
       }}
     >
       {/* SEARCH BAR */}
@@ -93,14 +93,6 @@ const MainTable = ({ stations }) => {
             onChange={(e) => setSearch(e.target.value)}
             sx={{ color: "white", padding: "10px", width: "20rem" }}
           />
-          <Typography
-            variant="body"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            STATIONS
-          </Typography>
         </Box>
       </AppBar>
       {/* TABLE */}

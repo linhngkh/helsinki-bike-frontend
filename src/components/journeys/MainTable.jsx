@@ -77,7 +77,7 @@ const MainTable = ({ journeys }) => {
       sx={{
         width: "55%",
         overflow: "hidden",
-        margin: "0 auto",
+        margin: "20px auto",
       }}
     >
       {/* SEARCH BAR */}
