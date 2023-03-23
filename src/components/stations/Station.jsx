@@ -67,7 +67,7 @@ const Station = ({ stations }) => {
   };
 
   // pagination function
-  const handleChangePage = (newPage) => {
+  const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
 
