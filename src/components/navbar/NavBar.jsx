@@ -17,7 +17,7 @@ const NavBarContainer = styled.div`
 const Logo = styled.div``;
 
 const LogoImage = styled.img`
-  width: 60px;
+  width: 50px;
 `;
 const Text = styled.h5`
   font-family: "Righteous", cursive;
