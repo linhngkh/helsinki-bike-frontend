@@ -66,7 +66,7 @@ const Station = ({ stations }) => {
     setOrderDirection(isAscending ? "desc" : "asc");
   };
 
-  // pagination function
+  // pagination function. can't delete "event" prop here
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
