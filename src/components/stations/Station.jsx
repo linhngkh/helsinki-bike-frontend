@@ -13,7 +13,6 @@ import {
   Box,
   AppBar,
   InputBase,
-  Checkbox,
 } from "@mui/material";
 
 // condition when "b" in order bigger than "a" in order then return 1 and vice versa

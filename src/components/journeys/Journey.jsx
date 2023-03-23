@@ -16,6 +16,8 @@ import {
 } from "@mui/material";
 
 const Journey = ({ journeys }) => {
+  // state for search name
+  const [search, setSearch] = useState("");
   return (
     <Paper
       sx={{
@@ -36,6 +38,7 @@ const Journey = ({ journeys }) => {
         >
           <DirectionsBikeIcon />
           <InputBase
+            onChange={(e) => setSearch(e.target.value)}
             placeholder="Search by typing name or address"
             inputProps={{ "aria-label": "search" }}
             sx={{ color: "white", padding: "10px", width: "20rem" }}
@@ -55,18 +58,32 @@ const Journey = ({ journeys }) => {
         <Table stickyHeader aria-label="sticky table">
           <TableHeader />
           <TableBody>
-            {journeys.map((journey, _id) => {
-              return (
-                <TableRow hover role="checkbox" tabIndex={-1} key={journey._id}>
-                  <TableCell>{journey.Departure_station_name}</TableCell>
-                  <TableCell>{journey.Return_station_name}</TableCell>
-                  <TableCell>
-                    {(journey.Covered_distance / 1000).toFixed(2)}
-                  </TableCell>
-                  <TableCell>{(journey.Duration / 60).toFixed(2)}</TableCell>
-                </TableRow>
-              );
-            })}
+            {journeys
+              .filter((item) => {
+                return search.toLowerCase() === ""
+                  ? item
+                  : item.Departure_station_name.toLowerCase().includes(
+                      search
+                    ) ||
+                      item.Return_station_name.toLowerCase().includes(search);
+              })
+              .map((journey, _id) => {
+                return (
+                  <TableRow
+                    hover
+                    role="checkbox"
+                    tabIndex={-1}
+                    key={journey._id}
+                  >
+                    <TableCell>{journey.Departure_station_name}</TableCell>
+                    <TableCell>{journey.Return_station_name}</TableCell>
+                    <TableCell>
+                      {(journey.Covered_distance / 1000).toFixed(2)}
+                    </TableCell>
+                    <TableCell>{(journey.Duration / 60).toFixed(2)}</TableCell>
+                  </TableRow>
+                );
+              })}
           </TableBody>
         </Table>
       </TableContainer>
