@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -10,7 +9,13 @@ html {
 }
 
 body {
-  background-color: #ffba00;
+  background-color: black;
   font-family: "Righteous", cursive;
-  min-height: 100vh;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -99;
 }

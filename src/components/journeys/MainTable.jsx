@@ -81,7 +81,7 @@ const MainTable = ({ journeys }) => {
       }}
     >
       {/* SEARCH BAR */}
-      <AppBar position="static" sx={{ background: "black" }}>
+      <AppBar position="static" sx={{ background: "#24292f" }}>
         <Box
           component="span"
           sx={{
@@ -98,7 +98,7 @@ const MainTable = ({ journeys }) => {
             sx={{ color: "white", padding: "10px", width: "20rem" }}
           />
           <Typography
-            variant="h6"
+            variant="body"
             noWrap
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}

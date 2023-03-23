@@ -9,8 +9,8 @@ const NavBarContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 70px;
-  margin: 15px auto;
-  background-color: transparent;
+  margin: 0 auto;
+  background-color: black;
   gap: 10px;
 `;
 
@@ -22,15 +22,11 @@ const LogoImage = styled.img`
 const Text = styled.h5`
   font-family: "Righteous", cursive;
   font-size: 25px;
-  color: black;
+  color: white;
 
   &:focus,
   &:active {
     text-decoration: none;
-  }
-
-  &:hover {
-    color: black;
   }
 `;
 

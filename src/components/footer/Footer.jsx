@@ -11,17 +11,19 @@ const FooterContainer = styled.div`
   height: 50px;
   margin-top: auto;
 `;
-const Text = styled.p``;
+const Text = styled.p`
+  color: white;
+`;
 const Anchor = styled.a`
   font-size: 50px;
-  color: black;
+  color: white;
   margin-left: 4px;
 `;
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <Text>&#169; 2023 Linh Nguyen - Dear code with love!</Text>
+      <Text>&#169; 2023 Linh Nguyen - Write code with love!</Text>
       <Anchor
         href="https://github.com/linh-nguyenkhanh/helsinki-bike-frontend"
         target="_blank"

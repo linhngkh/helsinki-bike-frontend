@@ -33,6 +33,7 @@ const Root = () => {
   return (
     <>
       <NavBar />
+
       <div>
         <Outlet />
       </div>

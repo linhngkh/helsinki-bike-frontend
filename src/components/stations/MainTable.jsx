@@ -81,10 +81,10 @@ const MainTable = ({ stations }) => {
       }}
     >
       {/* SEARCH BAR */}
-      <AppBar position="static" sx={{ background: "black" }}>
+      <AppBar position="static" sx={{ background: "#24292f" }}>
         <Box
           component="span"
-          sx={{ display: "flex", alignItems: "center", marginLeft: "10px" }}
+          sx={{ display: "flex", alignItems: "center", marginLeft: "20px" }}
         >
           <DirectionsBikeIcon />
           <InputBase

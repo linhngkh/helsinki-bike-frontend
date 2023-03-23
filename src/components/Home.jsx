@@ -5,32 +5,27 @@ import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import { container } from "./utils/Animations";
 import Footer from "./footer/Footer";
+import bgVideo from "../assets/bgVideo.mp4";
 
 const BigContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
-  margin: 0 auto;
-  background-image: url("/assets/bg.jpeg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  object-position: top;
+  width: 100%;
+  height: 100vh;
 `;
 
 const Container = styled.div`
   position: relative;
-  bottom: 240px;
+  bottom: 280px;
 `;
 
 const Title = styled.h1`
   font-size: 60px;
   font-weight: bold;
   letter-spacing: 16px;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 0.5px white;
 `;
 
 const ButtonContainer = styled.div`
@@ -59,6 +54,7 @@ const LandingPage = () => {
       transition={{ duration: 0.75, ease: "circInOut" }}
     >
       <BigContainer>
+        <video src={bgVideo} autoPlay loop muted />
         <Container>
           <m.div
             animate={{ x: 0 }}
