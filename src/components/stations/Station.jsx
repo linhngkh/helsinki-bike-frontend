@@ -104,7 +104,6 @@ const Station = ({ stations }) => {
       {/* TABLE */}
       <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
         <Table stickyHeader aria-label="sticky table">
-          <MaterialTable title="station data" columns={columns} />
           <TableHeader
             valueToOrderBy={valueToOrderBy}
             orderDirection={orderDirection}
