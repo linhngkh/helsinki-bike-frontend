@@ -15,8 +15,6 @@ import {
   InputBase,
   Checkbox,
 } from "@mui/material";
-import { Link } from "react-router-dom";
-import MaterialTable from "material-table";
 
 // condition when "b" in order bigger than "a" in order then return 1 and vice versa
 const descendingComparator = (a, b, orderBy) => {
@@ -133,14 +131,9 @@ const Station = ({ stations }) => {
                       const value = station[column.id];
                       return (
                         <TableCell key={station._index}>
-                          <Link
-                            to="/stations/id"
-                            style={{ textDecoration: "none", color: "black" }}
-                          >
-                            {column.format && typeof value === "number"
-                              ? column.format(value)
-                              : value}
-                          </Link>
+                          {column.format && typeof value === "number"
+                            ? column.format(value)
+                            : value}
                         </TableCell>
                       );
                     })}
