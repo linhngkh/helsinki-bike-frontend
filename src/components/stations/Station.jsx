@@ -13,8 +13,10 @@ import {
   Box,
   AppBar,
   InputBase,
+  Checkbox,
 } from "@mui/material";
 import { Link } from "react-router-dom";
+import MaterialTable from "material-table";
 
 // condition when "b" in order bigger than "a" in order then return 1 and vice versa
 const descendingComparator = (a, b, orderBy) => {
@@ -47,6 +49,9 @@ const sortedRowInformation = (rowArray, comparator) => {
 };
 
 const Station = ({ stations }) => {
+  // filter info
+  const [filter, setFilter] = useState(true);
+
   // states for sorting asc and desc
   const [orderDirection, setOrderDirection] = useState("asc");
   const [valueToOrderBy, setValueToOrderBy] = useState("id");
@@ -72,6 +77,7 @@ const Station = ({ stations }) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+
   return (
     <Paper
       sx={{
@@ -91,13 +97,14 @@ const Station = ({ stations }) => {
             placeholder="Search by typing name or address"
             inputProps={{ "aria-label": "search" }}
             onChange={(e) => setSearch(e.target.value)}
-            sx={{ color: "white", padding: "10px", width: "20rem" }}
+            sx={{ color: "white", padding: "10px", width: "15rem" }}
           />
         </Box>
       </AppBar>
       {/* TABLE */}
       <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
         <Table stickyHeader aria-label="sticky table">
+          <MaterialTable title="station data" columns={columns} />
           <TableHeader
             valueToOrderBy={valueToOrderBy}
             orderDirection={orderDirection}
