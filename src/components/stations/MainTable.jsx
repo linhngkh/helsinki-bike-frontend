@@ -94,7 +94,7 @@ const MainTable = ({ stations }) => {
             sx={{ color: "white", padding: "10px", width: "20rem" }}
           />
           <Typography
-            variant="h6"
+            variant="body"
             noWrap
             component="div"
             sx={{ display: { xs: "none", sm: "block" } }}
