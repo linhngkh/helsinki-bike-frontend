@@ -9,15 +9,11 @@ export const columns = [
     id: "distance",
     label: "Distance(km)",
     minWidth: 100,
-    align: "right",
-    format: (value) => (value / 1000).toFixed(1),
   },
   {
     id: "duration",
     label: "Duration(min)",
     minWidth: 100,
-    align: "right",
-    format: (value) => (value / 60).toFixed(1),
   },
 ];
 const TableHeader = (props) => {
