@@ -58,10 +58,12 @@ const Journey = ({ journeys }) => {
             {journeys.map((journey, _id) => {
               return (
                 <TableRow hover role="checkbox" tabIndex={-1} key={journey._id}>
-                  <TableCell>{journey.Duration}</TableCell>
                   <TableCell>{journey.Departure_station_name}</TableCell>
                   <TableCell>{journey.Return_station_name}</TableCell>
-                  <TableCell>{journey.Covered_distance}</TableCell>
+                  <TableCell>
+                    {(journey.Covered_distance / 1000).toFixed(2)}
+                  </TableCell>
+                  <TableCell>{(journey.Duration / 60).toFixed(2)}</TableCell>
                 </TableRow>
               );
             })}

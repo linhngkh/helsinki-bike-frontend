@@ -7,14 +7,14 @@ export const columns = [
   { id: "return", label: "Return", minWidth: 170 },
   {
     id: "distance",
-    label: "Distance(kilometers)",
+    label: "Distance(km)",
     minWidth: 100,
     align: "right",
     format: (value) => (value / 1000).toFixed(1),
   },
   {
     id: "duration",
-    label: "Duration(minutes)",
+    label: "Duration(min)",
     minWidth: 100,
     align: "right",
     format: (value) => (value / 60).toFixed(1),
