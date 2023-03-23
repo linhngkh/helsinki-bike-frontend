@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import TableHeader, { columns } from "./TableHeader";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
-
+import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import {
+  Tooltip,
   TableBody,
   Table,
   TableRow,
@@ -46,7 +47,6 @@ const sortedRowInformation = (rowArray, comparator) => {
 };
 
 const Station = ({ stations }) => {
-
   // states for sorting asc and desc
   const [orderDirection, setOrderDirection] = useState("asc");
   const [valueToOrderBy, setValueToOrderBy] = useState("id");
@@ -92,8 +92,11 @@ const Station = ({ stations }) => {
             placeholder="Search by typing name or address"
             inputProps={{ "aria-label": "search" }}
             onChange={(e) => setSearch(e.target.value)}
-            sx={{ color: "white", padding: "10px", width: "15rem" }}
+            sx={{ color: "white", padding: "10px", width: "20rem" }}
           />
+          <Tooltip title="Search by info shown per page " arrow>
+            <TipsAndUpdatesIcon>Arrow</TipsAndUpdatesIcon>
+          </Tooltip>
         </Box>
       </AppBar>
       {/* TABLE */}
