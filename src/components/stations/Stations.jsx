@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import { fetchStation } from "../../api/axios";
 import { useQuery } from "react-query";
 import Loading from "../utils/Loading";
-import MainTable from "././MainTable";
+import Station from "./Station";
 import { Container } from "../utils/Styled";
-
 
 const Stations = () => {
   const [page, setPage] = useState(0);
@@ -33,7 +32,7 @@ const Stations = () => {
           <Loading />
         </div>
       )}
-      <MainTable stations={stations} />
+      <Station stations={stations} />
     </Container>
   );
 };

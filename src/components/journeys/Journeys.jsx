@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { fetchJourney } from "../../api/axios";
-import MainTable from "././MainTable";
+import Journey from "././Journey";
 import Loading from "../utils/Loading";
 import { Container } from "../utils/Styled";
 
@@ -23,7 +23,7 @@ const Journeys = () => {
       </div>
     );
 
-  if (isError) return <p>Error: {error.message}</p>;
+  if (isError) return <h3>Error: {error.message}</h3>;
 
   return (
     <Container>
@@ -32,7 +32,7 @@ const Journeys = () => {
           <Loading />
         </div>
       )}
-      <MainTable journeys={journeys} />
+      <Journey journeys={journeys} />
     </Container>
   );
 };

@@ -6,7 +6,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Journeys from "./components/journeys/Journeys";
-import Home from "./components/Home";
+import Home from "./components/homepage/Home";
 import NavBar from "./components/navbar/NavBar";
 import Stations from "./components/stations/Stations";
 import "./index.css";

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "./utils/Styled";
+import { Button } from "../utils/Styled";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import { container } from "./utils/Animations";
-import Footer from "./footer/Footer";
-import bgVideo from "../assets/bgVideo.mp4";
+import { container } from "../utils/Animations";
+import Footer from "../footer/Footer";
+import bgVideo from "../../assets/bgVideo.mp4";
 
 const BigContainer = styled.div`
   display: flex;
@@ -22,9 +22,10 @@ const Container = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: 60px;
-  font-weight: bold;
+  font-size: 70px;
+  font-weight: bolder;
   letter-spacing: 16px;
+  color: black !important;
   -webkit-text-stroke: 0.5px white;
 `;
 

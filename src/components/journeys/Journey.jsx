@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import TableHeader, { columns } from "./TableHeader";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
-
 import {
-  Typography,
-  TableBody,
-  Table,
-  TableRow,
-  TableCell,
-  TableContainer,
-  Paper,
   TablePagination,
+  TableContainer,
+  Table,
+  Paper,
+  TableCell,
+  TableBody,
+  TableRow,
   Box,
   AppBar,
   InputBase,
+  Typography,
 } from "@mui/material";
 
 // condition when "b" in order bigger than "a" in order then return 1 and vice versa
@@ -46,25 +45,26 @@ const sortedRowInformation = (rowArray, comparator) => {
   return stablizedRowArray.map((el) => el[0]);
 };
 
-const MainTable = ({ stations }) => {
+const Journey = ({ journeys }) => {
   // states for sorting asc and desc
   const [orderDirection, setOrderDirection] = useState("asc");
   const [valueToOrderBy, setValueToOrderBy] = useState("id");
   // states for pagination
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(20);
   const [page, setPage] = useState(0);
+
   // state for search name
   const [search, setSearch] = useState("");
 
   // sorting function
-  const handleSorting = (event, property) => {
+  const handleSorting = (property) => {
     const isAscending = valueToOrderBy === property && orderDirection === "asc";
     setValueToOrderBy(property);
     setOrderDirection(isAscending ? "desc" : "asc");
   };
 
   // pagination function
-  const handleChangePage = (event, newPage) => {
+  const handleChangePage = ( newPage) => {
     setPage(newPage);
   };
 
@@ -75,7 +75,7 @@ const MainTable = ({ stations }) => {
   return (
     <Paper
       sx={{
-        width: "40%",
+        width: "55%",
         overflow: "hidden",
         margin: "20px auto",
       }}
@@ -84,7 +84,11 @@ const MainTable = ({ stations }) => {
       <AppBar position="static" sx={{ background: "#24292f" }}>
         <Box
           component="span"
-          sx={{ display: "flex", alignItems: "center", marginLeft: "20px" }}
+          sx={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+          }}
         >
           <DirectionsBikeIcon />
           <InputBase
@@ -93,6 +97,14 @@ const MainTable = ({ stations }) => {
             onChange={(e) => setSearch(e.target.value)}
             sx={{ color: "white", padding: "10px", width: "20rem" }}
           />
+          <Typography
+            variant="body"
+            noWrap
+            component="div"
+            sx={{ display: { xs: "none", sm: "block" } }}
+          >
+            JOURNEYS
+          </Typography>
         </Box>
       </AppBar>
       {/* TABLE */}
@@ -105,7 +117,7 @@ const MainTable = ({ stations }) => {
           />
           <TableBody>
             {sortedRowInformation(
-              stations,
+              journeys,
               getComparator(orderDirection, valueToOrderBy)
             )
               .filter((item) => {
@@ -115,18 +127,18 @@ const MainTable = ({ stations }) => {
                       item.Osoite.toLowerCase().includes(search);
               })
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((station, _index) => {
+              .map((journey, _id) => {
                 return (
                   <TableRow
                     hover
                     role="checkbox"
                     tabIndex={-1}
-                    key={station._index}
+                    key={journey._id}
                   >
                     {columns.map((column) => {
-                      const value = station[column.id];
+                      const value = journey[column.id];
                       return (
-                        <TableCell key={station._index}>
+                        <TableCell key={journey.index}>
                           {column.format && typeof value === "number"
                             ? column.format(value)
                             : value}
@@ -141,9 +153,9 @@ const MainTable = ({ stations }) => {
       </TableContainer>
       {/* PAGINATION */}
       <TablePagination
-        rowsPerPageOptions={[10, 30, 100]}
+        rowsPerPageOptions={[20, 50, 100]}
         component="div"
-        count={stations.length}
+        count={journeys.length}
         rowsPerPage={rowsPerPage}
         page={page}
         onPageChange={handleChangePage}
@@ -153,4 +165,4 @@ const MainTable = ({ stations }) => {
   );
 };
 
-export default MainTable;
+export default Journey;
