@@ -16,13 +16,6 @@ import {
 } from "@mui/material";
 
 const Journey = ({ journeys }) => {
-  const {
-    durartion: Duration,
-    departure_name: Departure_station_name,
-    return_name: Return_station_name,
-    covered_distance: Covered_distance,
-  } = journeys;
-
   return (
     <Paper
       sx={{
@@ -65,10 +58,10 @@ const Journey = ({ journeys }) => {
             {journeys.map((journey, _id) => {
               return (
                 <TableRow hover role="checkbox" tabIndex={-1} key={journey._id}>
-                  <TableCell>{durartion}</TableCell>
-                  <TableCell>{departure_name}</TableCell>
-                  <TableCell>{return_name}</TableCell>
-                  <TableCell>{columns}</TableCell>
+                  <TableCell>{journey.Duration}</TableCell>
+                  <TableCell>{journey.Departure_station_name}</TableCell>
+                  <TableCell>{journey.Return_station_name}</TableCell>
+                  <TableCell>{journey.Covered_distance}</TableCell>
                 </TableRow>
               );
             })}
