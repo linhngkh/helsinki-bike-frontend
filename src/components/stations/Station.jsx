@@ -46,8 +46,6 @@ const sortedRowInformation = (rowArray, comparator) => {
 };
 
 const Station = ({ stations }) => {
-  // filter info
-  const [filter, setFilter] = useState(true);
 
   // states for sorting asc and desc
   const [orderDirection, setOrderDirection] = useState("asc");
