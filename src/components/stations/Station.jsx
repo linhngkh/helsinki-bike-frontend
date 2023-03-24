@@ -136,7 +136,10 @@ const Station = ({ stations }) => {
                       const value = station[column.id];
                       return (
                         <TableCell key={station._index}>
-                          <Link to={`stations/${station.ID}`}>
+                          <Link
+                            to={`/stations/${station.ID}`}
+                            style={{ textDecoration: "none", color: "black" }}
+                          >
                             {column.format && typeof value === "number"
                               ? column.format(value)
                               : value}
