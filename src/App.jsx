@@ -9,6 +9,7 @@ import Journeys from "./components/journeys/Journeys";
 import Home from "./components/homepage/Home";
 import NavBar from "./components/navbar/NavBar";
 import Stations from "./components/stations/Stations";
+import SingleStation from "./components/stations/SingleStation";
 import "./index.css";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/journeys" element={<Journeys />} />
         <Route path="/stations" element={<Stations />} />
+        <Route path="/stations/stations/:id" element={<SingleStation />} />
       </Route>
     )
   );

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import TableHeader, { columns } from "./TableHeader";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
@@ -51,7 +52,7 @@ const Station = ({ stations }) => {
   const [orderDirection, setOrderDirection] = useState("asc");
   const [valueToOrderBy, setValueToOrderBy] = useState("id");
   // states for pagination
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(20);
   const [page, setPage] = useState(0);
   // state for search name
   const [search, setSearch] = useState("");
@@ -110,14 +111,17 @@ const Station = ({ stations }) => {
           <TableBody>
             {sortedRowInformation(
               stations,
+              // ordering per column
               getComparator(orderDirection, valueToOrderBy)
             )
+              // filter search bar
               .filter((item) => {
                 return search.toLowerCase() === ""
                   ? item
                   : item.Nimi.toLowerCase().includes(search) ||
                       item.Osoite.toLowerCase().includes(search);
               })
+              // slice pagination
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((station, _index) => {
                 return (
@@ -127,13 +131,16 @@ const Station = ({ stations }) => {
                     tabIndex={-1}
                     key={station._index}
                   >
+                    {/* mapping column with station data's rows */}
                     {columns.map((column) => {
                       const value = station[column.id];
                       return (
                         <TableCell key={station._index}>
-                          {column.format && typeof value === "number"
-                            ? column.format(value)
-                            : value}
+                          <Link to={`stations/${station.ID}`}>
+                            {column.format && typeof value === "number"
+                              ? column.format(value)
+                              : value}
+                          </Link>
                         </TableCell>
                       );
                     })}
@@ -145,7 +152,7 @@ const Station = ({ stations }) => {
       </TableContainer>
       {/* PAGINATION */}
       <TablePagination
-        rowsPerPageOptions={[10, 30, 100]}
+        rowsPerPageOptions={[20, 50, 200]}
         component="div"
         count={stations.length}
         rowsPerPage={rowsPerPage}
