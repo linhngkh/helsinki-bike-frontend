@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import TableHeader, { columns } from "./TableHeader";
+import TableHeader, { headers } from "./TableHeader";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import TipsAndUpdatesIcon from "@mui/icons-material/TipsAndUpdates";
 import {
@@ -51,9 +51,11 @@ const Station = ({ stations }) => {
   // states for sorting asc and desc
   const [orderDirection, setOrderDirection] = useState("asc");
   const [valueToOrderBy, setValueToOrderBy] = useState("id");
+
   // states for pagination
   const [rowsPerPage, setRowsPerPage] = React.useState(20);
   const [page, setPage] = useState(0);
+
   // state for search name
   const [search, setSearch] = useState("");
 
@@ -132,16 +134,16 @@ const Station = ({ stations }) => {
                     key={station._index}
                   >
                     {/* mapping column with station data's rows */}
-                    {columns.map((column) => {
-                      const value = station[column.id];
+                    {headers.map((header) => {
+                      const value = station[header.id];
                       return (
-                        <TableCell key={station._index}>
+                        <TableCell key={header.index}>
                           <Link
                             to={`/stations/${station.ID}`}
                             style={{ textDecoration: "none", color: "black" }}
                           >
-                            {column.format && typeof value === "number"
-                              ? column.format(value)
+                            {header.format && typeof value === "number"
+                              ? header.format(value)
                               : value}
                           </Link>
                         </TableCell>

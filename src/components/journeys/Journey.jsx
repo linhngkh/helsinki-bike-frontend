@@ -18,6 +18,7 @@ import {
 const Journey = ({ journeys }) => {
   // state for search name
   const [search, setSearch] = useState("");
+  
   return (
     <Paper
       sx={{

@@ -2,7 +2,7 @@ import React from "react";
 
 import { TableSortLabel, TableHead, TableRow, TableCell } from "@mui/material";
 
-export const columns = [
+export const headers = [
   { id: "Nimi", name: "Name", minWidth: 100 },
   { id: "Osoite", name: "Address", minWidth: 100 },
 ];
@@ -18,21 +18,21 @@ const TableHeader = (props) => {
   return (
     <TableHead>
       <TableRow>
-        {columns.map((column) => (
+        {headers.map((header) => (
           <TableCell
-            key={column.id}
+            key={header.id}
             style={{
-              minWidth: column.minWidth,
+              minWidth: header.minWidth,
               fontSize: "20px",
               fontWeight: "bold",
             }}
           >
             <TableSortLabel
-              active={valueToOrderBy === column.id}
-              direction={orderDirection == column.name ? order : "asc"}
-              onClick={createHandleSorting(column.id)}
+              active={valueToOrderBy === header.id}
+              direction={orderDirection == header.id ? order : "asc"}
+              onClick={createHandleSorting(header.id)}
             >
-              {column.name}
+              {header.name}
             </TableSortLabel>
           </TableCell>
         ))}
