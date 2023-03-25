@@ -17,7 +17,7 @@ export const columns = [
   },
 ];
 const TableHeader = (props) => {
-  const { orderDirection, orderValueBy, handleSorting } = props;
+  const { orderDirection, valueToOrderBy, handleSorting } = props;
 
   const createHandleSorting = (property) => (event) => {
     handleSorting(event, property);
@@ -36,7 +36,7 @@ const TableHeader = (props) => {
             }}
           >
             <TableSortLabel
-              active={orderValueBy === column.id}
+              active={valueToOrderBy === column.id}
               direction={
                 orderDirection == column.label ? orderDirection : "asc"
               }

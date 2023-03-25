@@ -34,6 +34,7 @@ const getComparator = (order, orderBy) => {
     ? (a, b) => descendingComparator(a, b, orderBy)
     : (a, b) => -descendingComparator(a, b, orderBy);
 };
+
 // map element array in order
 const sortedRowInformation = (rowArray, comparator) => {
   const stablizedRowArray = rowArray.map((el, index) => [el, index]);
