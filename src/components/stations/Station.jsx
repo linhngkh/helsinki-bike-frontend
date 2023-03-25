@@ -59,8 +59,8 @@ const Station = ({ stations }) => {
   // state for search name
   const [search, setSearch] = useState("");
 
-  // sorting function
-  const handleSorting = (property) => {
+  // sorting function , cant delete event prop here
+  const handleSorting = (event, property) => {
     const isAscending = valueToOrderBy === property && orderDirection === "asc";
     setValueToOrderBy(property);
     setOrderDirection(isAscending ? "desc" : "asc");
