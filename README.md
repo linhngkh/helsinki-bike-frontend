@@ -27,23 +27,30 @@ Instead of using useEffect hook, React Query is my new favourable auto-managed q
 Besides navigating seamlessly between each page, I also use useParams hook for accessing dynamically params from current Single Station URL. 
 * [Material UI](#https://mui.com/material-ui/react-table/) 
 
-Table component with useful functions:
-  -  Ordering per column, 
-  -  Paginating for huge rows of data
- 
 ### [Home Page](#home-page)
 Homepage was shown by introducing Helsinki City Bike headline animated by Framer Motion lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
     
-### [Stations Table](#station-table)
-
 ### [Journeys Table](#journey-table)
-
+Journey Table component is shown with with useful Material UI components and functions: 
+  - <b>Searching</b> by typing Departure and Return names
+  -  
+### [Stations Table](#station-table)
+Station Table component with useful Material UI components and functions:
+  -  <b>Ordering per column</b>: by clicking on the Header Name or Address, columns will be ordered automatically alphabetically.
+  -  <b>Paginating</b> for huge rows of data
 
 ## Back End
-
 ### [Handling Data](#datahandling)
+I handled data before actually exporting database by using Excel Microsoft FILTER function for journey distance less than 10 meters and journey duration less than 10 minutes.
 ### [Database](#Database) 
+  - MongoDB NoSQL database is chosen to hold a huge amount of data. 
+  
+  - Mongoose under the hood is chosen for building  straight-forward both journey + station Schema.
 ### [API Fetching](#api)
+Express.js is chosen for creating fast API and structured routings.
+
+When fetching data from database, I also make pagination to avoid crashing by querying: 
+``db.citybikesCollection.find().skip().limit()``
 ## [Testing](#testing)
 ## [Project Reflection](#reflection)
 -  [What was challenges I met?](#challenges)
