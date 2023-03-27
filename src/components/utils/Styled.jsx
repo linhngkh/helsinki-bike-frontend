@@ -20,3 +20,14 @@ export const Container = styled.div`
   min-height: 80vh;
   margin: 0 auto;
 `;
+
+export const NavBarExtendedContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background: red;
+  width: 400px;
+  @media (min-width: 700px) {
+    display: none;
+  }
+`;

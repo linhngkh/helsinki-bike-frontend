@@ -19,6 +19,17 @@ const BigContainer = styled.div`
 const Container = styled.div`
   position: relative;
   bottom: 280px;
+  @media (max-width: 700px) {
+    bottom: 10px;
+    text-align: center;
+  }
+`;
+
+const VideoContainer = styled.video`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -99;
 `;
 
 const Title = styled.h1`
@@ -34,6 +45,10 @@ const ButtonContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const Ulist = styled.ul``;
@@ -55,8 +70,9 @@ const LandingPage = () => {
       transition={{ duration: 0.75, ease: "circInOut" }}
     >
       <BigContainer>
-        <video src={bgVideo} autoPlay loop muted />
+        <VideoContainer src={bgVideo} autoPlay loop muted />
         <Container>
+          {" "}
           <m.div
             animate={{ x: 0 }}
             initial={{ x: "100%" }}
@@ -64,7 +80,6 @@ const LandingPage = () => {
           >
             <Title>HELSINKI CITY BIKES </Title>
           </m.div>
-
           <ButtonContainer>
             <Ulist variants={container} initial="hidden" animate="show">
               {" "}
