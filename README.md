@@ -1,5 +1,7 @@
-# Helsinki Bike App
+# Helsinki City Bike App
+A web-page to show journey and station bike of Finland in mobile friendly version. 
 ## Project Description
+This project is the pre-assignment for [Solita Dev Academy Finland 2023](https://github.com/solita/dev-academy-2023-exercise).
 ## Table of Contents 
 1. [Install and Run the Project](#install-and-run-the-project)
 2. [Front End](#front-end)
@@ -13,32 +15,56 @@
 6. [License](#license)
 
 
-## Install and Run the Project
+## Development environment
+### Requirement
+To run the site locally, I recommend using:
+``node.js v18``
+### Environment setup
+1. Install Node.js
+2. Clone the repository:
+<strong>```git clone https://github.com/linhngkh/helsinki-bike-frontend.git```</strong>
+ Or you could download repo zip file instead.
+3. From within the repository directory, run: <strong>``yarn``</strong> to install all necessary dependencies.
+### Commands
+<strong>``yarn dev``</strong>
+To get local server run. Opens system default browser to ``http://localhost:5173/``. 
 
+<strong>``yarn build``</strong>
+To build development version of the UI to ``./dist``folder.
+
+<strong>``yarn deploy``</strong>
+To build and deploy to Netlify.
+
+The customized script is: 
+```
+"deploy": "vite build && netlify deploy --prod"
+```
 ## Front End
 The frontend is made with React.js combined with Vite for faster dev-server and web development, managed by Yarn package. 
 
 In term of mobile interface, this app also works well and responsive.
 
 Main Dependencies: 
-* [API Fetching](#https://tanstack.com/query/v3/)
+* [API Fetching](https://tanstack.com/query/v3/)
 Instead of using useEffect hook, React Query is my new favourable auto-managed queries.
-* [React Router](#https://reactrouter.com/en/main)
+* [React Router](https://reactrouter.com/en/main)
 Besides navigating seamlessly between each page, I also use useParams hook for accessing dynamically params from current Single Station URL. 
-* [Material UI](#https://mui.com/material-ui/react-table/) 
+* [Material UI](https://mui.com/material-ui/react-table/) Taking advantages of built-in table with pagination and ordering per column.
 
 ### [Home Page](#home-page)
 Homepage was shown by introducing Helsinki City Bike headline animated by Framer Motion lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
     
 ### [Journeys Table](#journey-table)
-Journey Table component is shown with with useful Material UI components and functions: 
-  - <b>Searching</b> by typing Departure and Return names
-  -  
+
+  - <b>Searching</b> by typing journey departure and return.
+  
 ### [Stations Table](#station-table)
-Station Table component with useful Material UI components and functions:
+ - <b>Searching</b> by typing station name and address.
+
+Station Table component with useful built-in Material UI components and functions:
   -  <b>Ordering per column</b>: by clicking on the Header Name or Address, columns will be ordered automatically alphabetically.
   -  <b>Paginating</b> for huge rows of data
-
+ 
 ## Back End
 ### [Handling Data](#datahandling)
 I handled data before actually exporting database by using Excel Microsoft FILTER function for journey distance less than 10 meters and journey duration less than 10 minutes.
@@ -47,17 +73,40 @@ I handled data before actually exporting database by using Excel Microsoft FILTE
   
   - Mongoose under the hood is chosen for building  straight-forward both journey + station Schema.
 ### [API Fetching](#api)
-Express.js is chosen for creating fast API and structured routings.
+Express.js is chosen for creating fast REST API and structured routings.
 
 When fetching data from database, I also make pagination to avoid crashing by querying: 
 ``db.citybikesCollection.find().skip().limit()``
 ## [Testing](#testing)
 ## [Project Reflection](#reflection)
+- [*What was my motivation? Why did I build this project?*](#motivation)
+
+This pre-assignment is the best time challenge for full stack coding. I am really fond of learning how to work with map or transportation app because normally I use map app everyday and I get to search for journeys/stations, so yeah I wonder and figure it out how it work under the hood. In addition, I would want to challenge myself with this assignment after a while learning programming, especially focusing on front-end skills and avoiding tutorial hell. 
+
+Another motivation is I would want to be recognized by my skills both front-end and back-end, although my experience in this field is not long. Truly I have pushed myself to limitless.
 -  [What was challenges I met?](#challenges)
+
+As a coder, I also builds and break things to find the best solution for the app both front-end and back-end. I changed from one way of doing to another one to see if it works better and this leads to time-consuming or even conflicts??. I also met a lot of bugs but thanks to Stack Overflow, I could handle those bugs.
 - [What did I learn?](#lession)
+
+
+This is the first time I handle a huge amount of database & API and this assignment has sharpened my skills in using some MongoDB queries. 
+
+I learn to deploy backend on Docker and 
+
+
+I know that my app is still incomplete as a normal travel app, both frontend and backend. Therefore, there still be a ground for improving it in the future.
 - [Project Improvement](#improvement)
+Some features I hope to implement in the future is about concentrating on unit testings for component functional.
+
 
 ## [License](#License)
+Journey data file and video are own by [City Bike Finland](https://www.citybikefinland.fi/)
+
+Station data file is owned by [HSL](https://public-transport-hslhrt.opendata.arcgis.com/datasets/helsingin-ja-espoon-kaupunkipy%C3%B6r%C3%A4asemat-avoin/explore)
+
+
+
 
 
 
