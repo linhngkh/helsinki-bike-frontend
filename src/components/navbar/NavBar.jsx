@@ -5,7 +5,7 @@ import { Button, NavbarExtendedContainer } from "../utils/Styled";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
-const NavBarContainer = styled.div`
+const NavBarContainer = styled.nav`
   position: sticky;
   display: flex;
   align-items: center;
@@ -16,7 +16,6 @@ const NavBarContainer = styled.div`
 
   @media (min-width: 700px) {
     height: 80px;
-    display: none;
   }
 `;
 
@@ -52,7 +51,6 @@ const Text = styled.h5`
 
 const NavButton = styled(Button)`
   background-color: transparent;
-  color: white;
   border: none;
   &:hover {
     border-radius: 7px;
@@ -67,7 +65,6 @@ const NavButton = styled(Button)`
 const NavbarLink = styled(Link)`
   text-decoration: none;
   margin: 10px;
-
   @media (max-width: 700px) {
     display: none;
   }
@@ -84,23 +81,23 @@ const NavBar = () => {
 
   return (
     <NavBarContainer extendNavbar={extendNavBar}>
-      <NavbarLink to="/journeys">
+      <Link to="/journeys">
         <NavButton>
           <Text>Journeys</Text>
         </NavButton>
-      </NavbarLink>
+      </Link>
       <Logo>
-        <NavbarLink to="/">
+        <Link to="/">
           <NavButton>
             <LogoImage src="https://m.media-amazon.com/images/I/51-G-vCgr2L.png" />
           </NavButton>
-        </NavbarLink>
+        </Link>
       </Logo>
-      <NavbarLink to="/stations">
+      <Link to="/stations">
         <NavButton>
           <Text>Stations</Text>
         </NavButton>
-      </NavbarLink>
+      </Link>
       {/* hamburger bar for mobile size */}
       <HamburgerButton
         onClick={() => {
