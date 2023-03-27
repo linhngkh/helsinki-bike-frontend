@@ -45,12 +45,16 @@ The frontend is made with React.js combined with Vite for faster dev-server and 
 In term of mobile interface, this app also works well and responsive.
 
 Main Dependencies: 
-* [API Fetching](https://tanstack.com/query/v3/)
+* [API Fetching] (https://tanstack.com/query/v3/)
 Instead of using useEffect hook, React Query is my new favourable auto-managed queries.
-* [React Router](https://reactrouter.com/en/main)
+* [React Router] (https://reactrouter.com/en/main)
 Besides navigating seamlessly between each page, I also use useParams hook for accessing dynamically params from current Single Station URL. 
-* [Material UI](https://mui.com/material-ui/react-table/) Taking advantages of built-in table with pagination and ordering per column.
+* [Material UI] (https://mui.com/material-ui/react-table/) 
 
+Table component with useful functions:
+  -  Ordering per column, 
+  -  Paginating for huge rows of data
+ 
 ### [Home Page](#home-page)
 Homepage was shown by introducing Helsinki City Bike headline animated by Framer Motion lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
     
