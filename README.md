@@ -3,7 +3,7 @@ A web-page to show journey and station bike of Finland in mobile friendly versio
 ## Project Description
 This project is the pre-assignment for [Solita Dev Academy Finland 2023](https://github.com/solita/dev-academy-2023-exercise).
 ## Table of Contents 
-1. [Install and Run the Project](#install-and-run-the-project)
+1. [Development environment](#development-environment)
 2. [Front End](#front-end)
     * [Home Page](#home-page)
     * [Journey Page](#journey-page)
