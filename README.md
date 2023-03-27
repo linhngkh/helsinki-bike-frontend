@@ -1,5 +1,5 @@
 # Helsinki City Bike App
-A web-page to show journey and station bike of Finland in mobile friendly version. 
+A web-page to show journey and station bike information of Finland in mobile friendly version. 
 ## Project Description
 This project is the pre-assignment for [Solita Dev Academy Finland 2023](https://github.com/solita/dev-academy-2023-exercise).
 ## Table of Contents 
@@ -9,8 +9,10 @@ This project is the pre-assignment for [Solita Dev Academy Finland 2023](https:/
     * [Journey Page](#journey-page)
     * [Station Page](#station-page)
 3. [Back End](#back-end)
-    * [Data Validating](#home-page)
-4. [API Testing](#api-testing)
+    * [Handling Data](#handling-data)
+    * [Database](#database) 
+    * [API Fetching](#api-fetching)
+4. [Testings](#testing)
 5. [Project Reflection](#project-reflection)
 6. [License](#license)
 
