@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { Button, NavBarExtendedContainer } from "../utils/Styled";
+import { Button, NavbarExtendedContainer } from "../utils/Styled";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
@@ -10,26 +10,23 @@ const NavBarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: {
-    $(props) = > {
-      (props.extendNavbar? "100vh": "70px");
-    }
-  }
-  width: 100%;
+  height: ${(props) => (props.extendNavbar ? "100vh" : "80px")};
   background-color: black;
   gap: 10px;
+
+  @media (min-width: 700px) {
+    height: 80px;
+    display: none;
+  }
 `;
 
 const HamburgerButton = styled.button`
-  position: relative;
-  left: 140px;
-  margin-top: 10px;
-  width: 60px;
-  height: 40px;
+  width: 70px;
+  height: 50px;
+  background: none;
   border: none;
   color: white;
-  background: none;
-  font-size: 40px;
+  font-size: 45px;
   cursor: pointer;
 
   @media (min-width: 700px) {
@@ -55,12 +52,22 @@ const Text = styled.h5`
 
 const NavButton = styled(Button)`
   background-color: transparent;
+  color: white;
   border: none;
   &:hover {
     border-radius: 7px;
     border: 5px solid transparent;
     mask-composite: exclude;
   }
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+
+const NavbarLink = styled(Link)`
+  text-decoration: none;
+  margin: 10px;
+
   @media (max-width: 700px) {
     display: none;
   }
@@ -77,50 +84,55 @@ const NavBar = () => {
 
   return (
     <NavBarContainer extendNavbar={extendNavBar}>
-      <Link to="/journeys" style={{ textDecoration: "none" }}>
+      <NavbarLink to="/journeys">
         <NavButton>
           <Text>Journeys</Text>
         </NavButton>
-      </Link>
+      </NavbarLink>
       <Logo>
-        <Link to="/" style={{ textDecoration: "none" }}>
+        <NavbarLink to="/">
           <NavButton>
             <LogoImage src="https://m.media-amazon.com/images/I/51-G-vCgr2L.png" />
           </NavButton>
-        </Link>
+        </NavbarLink>
       </Logo>
-      <Link to="/stations" style={{ textDecoration: "none" }}>
+      <NavbarLink to="/stations">
         <NavButton>
           <Text>Stations</Text>
         </NavButton>
-      </Link>
+      </NavbarLink>
       {/* hamburger bar for mobile size */}
       <HamburgerButton
         onClick={() => {
           setExtendNavBar((current) => !current);
         }}
       >
-        {extendNavBar ? <AiOutlineCloseCircle /> : <GiHamburgerMenu />}
+        {extendNavBar ? (
+          <>
+            <AiOutlineCloseCircle />
+          </>
+        ) : (
+          <div>
+            <GiHamburgerMenu />
+          </div>
+        )}
       </HamburgerButton>
       {/* navbar container for mobile size */}
       {extendNavBar && (
-        <NavBarExtendedContainer>
-          <NavBarLinkExtended to="/" style={{ textDecoration: "none" }}>
-            <NavButton>
-              <Text>Home</Text>
-            </NavButton>
-          </NavBarLinkExtended>
-          <NavBarLinkExtended to="/journeys" style={{ textDecoration: "none" }}>
-            <NavButton>
-              <Text>Journeys</Text>
-            </NavButton>
-          </NavBarLinkExtended>
-          <NavBarLinkExtended to="/stations" style={{ textDecoration: "none" }}>
-            <NavButton>
-              <Text>Stations</Text>
-            </NavButton>
-          </NavBarLinkExtended>
-        </NavBarExtendedContainer>
+        <NavbarExtendedContainer>
+          <Text>
+            {" "}
+            <NavBarLinkExtended to="/">Home</NavBarLinkExtended>
+          </Text>
+          <Text>
+            {" "}
+            <NavBarLinkExtended to="/journeys">Journeys</NavBarLinkExtended>
+          </Text>
+          <Text>
+            {" "}
+            <NavBarLinkExtended to="/stations">Stations</NavBarLinkExtended>
+          </Text>
+        </NavbarExtendedContainer>
       )}
     </NavBarContainer>
   );

@@ -21,12 +21,11 @@ export const Container = styled.div`
   margin: 0 auto;
 `;
 
-export const NavBarExtendedContainer = styled.div`
+export const NavbarExtendedContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  background: red;
-  width: 400px;
+  align-items: center;
+
   @media (min-width: 700px) {
     display: none;
   }
