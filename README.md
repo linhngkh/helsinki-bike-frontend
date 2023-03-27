@@ -68,12 +68,10 @@ Station Table component with useful built-in Material UI components and function
 I handled data before actually exporting database by using Excel Microsoft FILTER function for journey distance less than 10 meters and journey duration less than 10 minutes.
 ### [Database](#Database) 
   - MongoDB NoSQL database is chosen to hold a huge amount of data. 
-  
   - Mongoose under the hood is chosen for building  straight-forward both journey + station Schema.
 ### [API Fetching](#api)
-Express.js is chosen for creating fast REST API and structured routings.
-
-When fetching data from database, I also make pagination to avoid crashing by querying: 
+- Express.js is chosen for creating fast REST API and structured routings.
+- When fetching data from database, I also make pagination to avoid crashing by querying: 
 ``db.citybikesCollection.find().skip().limit()``
 ## [Testing](#testing)
 ## [Project Reflection](#reflection)
@@ -81,7 +79,11 @@ When fetching data from database, I also make pagination to avoid crashing by qu
 
 This pre-assignment is the best time challenge for full stack coding. I am really fond of learning how to work with map or transportation app because normally I use map app everyday and I get to search for journeys/stations, so yeah I wonder and figure it out how it work under the hood. In addition, I would want to challenge myself with this assignment after a while learning programming, especially focusing on front-end skills and avoiding tutorial hell. 
 
-Another motivation is I would want to be recognized by my skills both front-end and back-end, although my experience in this field is not long. Truly I have pushed myself to limitless.
+Another motivation is I would want to be recognized by my skills both front-end and back-end, although my experience in this field is not long. Truly I have pushed myself to limitless. Through this pre-assignment, I think I am the perfect one for Solita Dev Academy as I still get to learn a lot of thing and complete myself to become more improved and skilled developer. 
+This is my fav quote:
+``Dreamer and Doer are the same.``
+
+Thank you for who created this assignment and your time and consideration. 
 -  [What was challenges I met?](#challenges)
 
 As a coder, I also builds and break things to find the best solution for the app both front-end and back-end. I changed from one way of doing to another one to see if it works better and this leads to time-consuming or even conflicts??. I also met a lot of bugs but thanks to Stack Overflow, I could handle those bugs.
@@ -90,7 +92,7 @@ As a coder, I also builds and break things to find the best solution for the app
 
 This is the first time I handle a huge amount of database & API and this assignment has sharpened my skills in using some MongoDB queries. 
 
-I learn to deploy backend on Docker and 
+I learn to deploy backend on Docker 
 
 
 I know that my app is still incomplete as a normal travel app, both frontend and backend. Therefore, there still be a ground for improving it in the future.
