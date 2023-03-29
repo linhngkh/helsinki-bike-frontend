@@ -55,22 +55,33 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 Homepage was shown by introducing Helsinki City Bike headline animated by Framer Motion lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
     
 ### [Journeys Table](#journey-table)
-
+#### Recommended
   - <b>Searching</b> by typing journey departure and return.
-  
+#### Additional
 ### [Stations Table](#station-table)
+#### Recommended
  - <b>Searching</b> by typing station name and address.
 
 Station Table component with useful built-in Material UI components and functions:
   -  <b>Ordering per column</b>: by clicking on the Header Name or Address, columns will be ordered automatically alphabetically.
   -  <b>Paginating</b> for huge rows of data
+#### Additional
+### [Single Stations View](#single-station-view)
+#### Recommended
+#### Additional
+ - Top 5 most popular departure stations for journeys ending at the station by query
+
+ ```db.citybikeCollection.aggregate([ {"$unwind": "$Departure_station_name" }, { "$sortByCount": "$Departure_station_name" }, { "$limit": 5 }])```
+ - Top 5 most popular return stations for journeys starting from the station by query: 
  
+ ```db.citybikeCollection.aggregate([{ "$unwind": "$Return_station_name" }, { "$sortByCount": "$Return_station_name" }, { "$limit": 5 }])```
 ## Back End
 ### [Handling Data](#datahandling)
 I handled data before actually exporting database by using Excel Microsoft FILTER function for journey distance less than 10 meters and journey duration less than 10 minutes.
 ### [Database](#Database) 
   - MongoDB NoSQL database is chosen to hold a huge amount of data. 
   - Mongoose under the hood is chosen for building  straight-forward both journey + station Schema.
+  
 ### [API Fetching](#api)
 - Express.js is chosen for creating fast REST API and structured routings.
 - When fetching data from database, I also make pagination to avoid crashing by querying: 
