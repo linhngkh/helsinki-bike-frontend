@@ -81,7 +81,7 @@ Homepage was shown by introducing Helsinki City Bike headline animated by Framer
 
 #### [Recommended](#Recommended)
  - <b>Searching</b> by typing station name and address.
-<img width="538" alt="searchbytyping" src="https://user-images.githubusercontent.com/44481142/228831199-66bf5c5b-42c6-4cea-aca5-3a92fb5a2772.png">
+<img width="300" alt="searchbytyping" src="https://user-images.githubusercontent.com/44481142/228831199-66bf5c5b-42c6-4cea-aca5-3a92fb5a2772.png">
 
 
 
