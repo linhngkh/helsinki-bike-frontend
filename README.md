@@ -51,13 +51,12 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 * [Material UI](https://mui.com/material-ui/react-table/) 
 
 ### [Home Page](#home-page)
-Homepage was shown by introducing Helsinki City Bike headline animated by Framer Motion lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
+ - Homepage was shown by introducing Helsinki City Bike headline animated by Framer Motion lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
    
  <img width="200" alt="mobile view" src="https://user-images.githubusercontent.com/44481142/228831098-7f07299a-4b0e-426a-acaa-f9708dcedc35.png">
 
     
-    
-For better user interface, Tooltip and Skeleton components are added for providing briefly about search-by-typing function and for showing initial loading data respectively.  
+ - For better user interface, Tooltip and Skeleton components are added for providing briefly about search-by-typing function and for showing initial loading data respectively.  
 ### [Journeys Page](#journey-page)
 #### [Recommended](#Recommended)
  <img width="400" alt="Screenshot 2023-03-30 at 15 19 20" src="https://user-images.githubusercontent.com/44481142/228834347-e3af3016-3e4f-405d-bbc4-4f59497a483a.png">
@@ -68,7 +67,7 @@ For better user interface, Tooltip and Skeleton components are added for providi
 <img width="300" alt="searchbytyping" src="https://user-images.githubusercontent.com/44481142/228831346-86391847-0509-46f6-b8c1-559eac116bb1.png">
 
 
-- <b>Pagination</b>
+- <b>Pagination</b> with customized option to choose how many rows per page: 
 <img width="700" alt="Screenshot 2023-03-30 at 18 13 00" src="https://user-images.githubusercontent.com/44481142/228882820-8dd3afd3-e480-4ff7-91b0-3b8f1171e95f.png">
 
 
@@ -88,12 +87,12 @@ For better user interface, Tooltip and Skeleton components are added for providi
 <img width="300" alt="searchbytyping" src="https://user-images.githubusercontent.com/44481142/228831199-66bf5c5b-42c6-4cea-aca5-3a92fb5a2772.png">
 
 
+  - <b>Ordering per column</b>: by clicking on the Header Name or Address, columns will be ordered automatically alphabetically.
 
-  -  <b>Ordering per column</b>: by clicking on the Header Name or Address, columns will be ordered automatically alphabetically.
-<img width="100" alt="Screenshot 2023-03-30 at 15 12 26" src="https://user-images.githubusercontent.com/44481142/228832434-acdf3830-55ef-4cd7-a168-bd49982bf85f.png">
+ <img width="200" alt="Screenshot 2023-03-30 at 15 12 26" src="https://user-images.githubusercontent.com/44481142/228832434-acdf3830-55ef-4cd7-a168-bd49982bf85f.png">
 
 
-  -  <b>Paginating</b> for huge rows of data
+  -  <b>Paginating</b> for huge rows of data with customized option to choose how many rows per page: 
 
 <img width="300" alt="pagination" src="https://user-images.githubusercontent.com/44481142/228831249-7431f2ff-7e3e-4d0b-bfdb-30865820bc13.png">
 
@@ -110,10 +109,10 @@ For better user interface, Tooltip and Skeleton components are added for providi
 
 #### [Additional](#Additional)
  - Top 5 most popular departure stations for journeys ending at the station by query
-<img width="800" alt="departure" src="https://user-images.githubusercontent.com/44481142/228786802-a469a210-404b-41fc-b9f8-75f9061d34dd.png">
+<img width="900" alt="departure" src="https://user-images.githubusercontent.com/44481142/228786802-a469a210-404b-41fc-b9f8-75f9061d34dd.png">
 
  - Top 5 most popular return stations for journeys starting from the station by query: 
- <img width="800" alt="return" src="https://user-images.githubusercontent.com/44481142/228786829-a7c10c1e-143a-4d1f-8d7e-11901cf0a15a.png">
+ <img width="900" alt="return" src="https://user-images.githubusercontent.com/44481142/228786829-a7c10c1e-143a-4d1f-8d7e-11901cf0a15a.png">
 
 
 ## Back End
@@ -159,7 +158,10 @@ I learn to deploy backend on Docker because not only I want to surprise you but 
 
 I know that my app is still incomplete as a normal travel app, both frontend and backend. Therefore, there still be a ground for improving it in the future.
 - [Project Improvement](#improvement)
-Some features I hope to implement in the future is about concentrating on unit testings for component functional.
+Some features I hope to implement in the future is about:  
+  * concentrate on unit testings for all components functionally.
+  * create more endpoints / routings for user finding info.
+  * ensure handle error middleware for each user routing context if they search for more info.
 
 
 ## [License](#License)
@@ -167,7 +169,7 @@ Journey data file and video are own by [City Bike Finland](https://www.citybikef
 
 Station data file is owned by [HSL](https://public-transport-hslhrt.opendata.arcgis.com/datasets/helsingin-ja-espoon-kaupunkipy%C3%B6r%C3%A4asemat-avoin/explore)
 
-
+Material UI components is belonged to [Material UI](https://mui.com/material-ui/react-table/) follow by MIT License 
 
 
 
