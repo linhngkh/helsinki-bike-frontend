@@ -51,9 +51,9 @@ const Journey = ({ journeys }) => {
   const [search, setSearch] = useState("");
 
   // states for sorting asc and desc
-  const [orderDirection, setOrderDirection] = useState("asc");
-  const [valueToOrderBy, setValueToOrderBy] = useState("id");
 
+  const [valueToOrderBy, setValueToOrderBy] = useState("id");
+  const [orderDirection, setOrderDirection] = useState("asc");
   // states for pagination
   const [rowsPerPage, setRowsPerPage] = React.useState(20);
   const [page, setPage] = useState(0);

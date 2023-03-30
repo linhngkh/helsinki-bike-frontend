@@ -3,20 +3,21 @@ import React from "react";
 import { TableSortLabel, TableHead, TableRow, TableCell } from "@mui/material";
 
 export const columns = [
-  { id: "id", label: "Departure", minWidth: 170 },
-  { id: "return", label: "Return", minWidth: 170 },
+  { id: "Departure", label: "Departure", minWidth: 170 },
+  { id: "Return", label: "Return", minWidth: 170 },
   {
-    id: "distance",
+    id: "Covered_distance",
     label: "Distance(km)",
     minWidth: 100,
   },
   {
-    id: "duration",
+    id: "Duration",
     label: "Duration(min)",
     minWidth: 100,
   },
 ];
 const TableHeader = (props) => {
+  // receive props from main table
   const { orderDirection, valueToOrderBy, handleSorting } = props;
 
   const createHandleSorting = (property) => (event) => {
@@ -37,9 +38,7 @@ const TableHeader = (props) => {
           >
             <TableSortLabel
               active={valueToOrderBy === column.id}
-              direction={
-                orderDirection == column.label ? orderDirection : "asc"
-              }
+              direction={orderDirection == column.id ? orderDirection : "desc"}
               onClick={createHandleSorting(column.id)}
             >
               {column.label}
