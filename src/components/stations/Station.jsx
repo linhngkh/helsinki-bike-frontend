@@ -98,7 +98,7 @@ const Station = ({ stations }) => {
             onChange={(e) => setSearch(e.target.value)}
             sx={{ color: "white", padding: "10px", width: "20rem" }}
           />
-          <Tooltip title="Search by info shown per page " arrow>
+          <Tooltip title="Search by info of row shown per page" arrow>
             <TipsAndUpdatesIcon>Arrow</TipsAndUpdatesIcon>
           </Tooltip>
         </Box>
