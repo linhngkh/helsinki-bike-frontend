@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import TableHeader from "./TableHeader";
 import DirectionsBikeIcon from "@mui/icons-material/DirectionsBike";
 import {
+  TablePagination,
   TableContainer,
   Table,
   Paper,
@@ -53,6 +54,19 @@ const Journey = ({ journeys }) => {
   const [orderDirection, setOrderDirection] = useState("asc");
   const [valueToOrderBy, setValueToOrderBy] = useState("id");
 
+  // states for pagination
+  const [rowsPerPage, setRowsPerPage] = React.useState(20);
+  const [page, setPage] = useState(0);
+
+  // pagination function. can't delete "event" prop here
+  const handleChangePage = (event, newPage) => {
+    setPage(newPage);
+  };
+
+  const handleChangeRowsPerPage = (event) => {
+    setRowsPerPage(+event.target.value);
+    setPage(0);
+  };
   // sorting function , cant delete event prop here
   const handleSorting = (event, property) => {
     const isAscending = valueToOrderBy === property && orderDirection === "asc";
@@ -109,6 +123,7 @@ const Journey = ({ journeys }) => {
               // ordering per column
               getComparator(orderDirection, valueToOrderBy)
             )
+              // filter search bar
               .filter((item) => {
                 return search.toLowerCase() === ""
                   ? item
@@ -116,7 +131,8 @@ const Journey = ({ journeys }) => {
                       search
                     ) ||
                       item.Return_station_name.toLowerCase().includes(search);
-              })
+              }) // slice pagination
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((journey, _id) => {
                 return (
                   <TableRow
@@ -137,6 +153,16 @@ const Journey = ({ journeys }) => {
           </TableBody>
         </Table>
       </TableContainer>
+      {/* PAGINATION */}
+      <TablePagination
+        rowsPerPageOptions={[20, 50, 200]}
+        component="div"
+        count={journeys.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+      />
     </Paper>
   );
 };

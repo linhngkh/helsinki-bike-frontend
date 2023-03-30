@@ -101,7 +101,7 @@ Station Table component with useful built-in Material UI components and function
 ### [API Fetching](#api)
 - Express.js is chosen for creating fast REST API and structured routings.
 - When fetching data from database, I also make pagination to avoid crashing by querying: 
-``db.citybikesCollection.find().skip().limit()``
+``db.Journeys.find().skip().limit()``
 ## [Testing](#testing)
 ## [Project Reflection](#reflection)
 - [*What was my motivation? Why did I build this project?*](#motivation)

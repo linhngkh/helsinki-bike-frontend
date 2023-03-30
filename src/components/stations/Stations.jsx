@@ -22,8 +22,7 @@ const Stations = () => {
         <Loading />
       </div>
     );
-
-  if (isError) return <p>Error: {error.message}</p>;
+  if (isError) return <h3>Error: {error.message}</h3>;
 
   return (
     <Container>
