@@ -71,19 +71,17 @@ Station Table component with useful built-in Material UI components and function
  * Total number of journeys starting from the station
  <img width="1003" alt="example2" src="https://user-images.githubusercontent.com/44481142/228785848-535da001-5d75-4ebf-b36b-c87db73e5120.png">
 
-
  *Total number of journeys ending at the station
 <img width="880" alt="example1" src="https://user-images.githubusercontent.com/44481142/228785874-f170c1d6-4b49-40f6-bd0b-92105f20f1e6.png">
 
-
-
 #### Additional
  - Top 5 most popular departure stations for journeys ending at the station by query
+<img width="1182" alt="departure" src="https://user-images.githubusercontent.com/44481142/228786802-a469a210-404b-41fc-b9f8-75f9061d34dd.png">
 
- ```db.citybikeCollection.aggregate([ {"$unwind": "$Departure_station_name" }, { "$sortByCount": "$Departure_station_name" }, { "$limit": 5 }])```
  - Top 5 most popular return stations for journeys starting from the station by query: 
- 
- ```db.citybikeCollection.aggregate([{ "$unwind": "$Return_station_name" }, { "$sortByCount": "$Return_station_name" }, { "$limit": 5 }])```
+ <img width="1180" alt="return" src="https://user-images.githubusercontent.com/44481142/228786829-a7c10c1e-143a-4d1f-8d7e-11901cf0a15a.png">
+
+
 ## Back End
 ### [Handling Data](#datahandling)
 * To find and remove journeys that lasted for less than 10 seconds in MongoDB:
