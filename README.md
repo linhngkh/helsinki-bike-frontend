@@ -57,14 +57,14 @@ Homepage was shown by introducing Helsinki City Bike headline animated by Framer
 
     
     
-    
+For better user interface, Tooltip and Skeleton components are added for providing briefly about search-by-typing function and for showing initial loading data respectively.  
 ### [Journeys Page](#journey-page)
 #### [Recommended](#Recommended)
  <img width="400" alt="Screenshot 2023-03-30 at 15 19 20" src="https://user-images.githubusercontent.com/44481142/228834347-e3af3016-3e4f-405d-bbc4-4f59497a483a.png">
 
 
 #### [Additional](#Additional)
-- <b>Searching</b> by typing journey departure and return.
+- <b>Searching-by-typing</b> journey departure and return.
 <img width="300" alt="searchbytyping" src="https://user-images.githubusercontent.com/44481142/228831346-86391847-0509-46f6-b8c1-559eac116bb1.png">
 
 
@@ -84,7 +84,7 @@ Homepage was shown by introducing Helsinki City Bike headline animated by Framer
 <img width="300" alt="stationtable" src="https://user-images.githubusercontent.com/44481142/228830907-63f18a82-3326-47ad-9785-8c6fde72044b.png">
 
 #### [Recommended](#Recommended)
- - <b>Searching</b> by typing station name and address.
+ - <b>Searching-by-typing</b> station name and address.
 <img width="300" alt="searchbytyping" src="https://user-images.githubusercontent.com/44481142/228831199-66bf5c5b-42c6-4cea-aca5-3a92fb5a2772.png">
 
 
