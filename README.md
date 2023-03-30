@@ -115,7 +115,7 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
  <img width="800" alt="return" src="https://user-images.githubusercontent.com/44481142/228786829-a7c10c1e-143a-4d1f-8d7e-11901cf0a15a.png">
 
 
-## Back End
+## [Back End](https://github.com/linhngkh/helsinki-bike-backend)
 ### [Handling Data](#datahandling)
 * To find and remove journeys that lasted for less than 10 seconds in MongoDB:
 
@@ -136,7 +136,7 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 - When working with data in backend, I also make pagination to avoid crashing by querying: 
 ``db.Journeys.find().skip().limit()``
 ## [Testing](#testing)
-## [Project Reflection](#reflection)
+## [Project Reflection](#Project-reflection)
 - [*What was my motivation? Why did I build this project?*](#motivation)
 
 This pre-assignment is the best time challenge for full stack coding. I am really fond of learning how to work with map or transportation app because normally I use map app everyday and I get to search for journeys/stations, so yeah I wonder and figure it out how it work under the hood. In addition, I would want to challenge myself with this assignment after a while learning programming, especially focusing on front-end skills and avoiding tutorial hell. 
