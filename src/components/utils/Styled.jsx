@@ -25,7 +25,7 @@ export const NavbarExtendedContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  gap: 20px;
   @media (min-width: 700px) {
     display: none;
   }

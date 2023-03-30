@@ -27,7 +27,8 @@ const HamburgerButton = styled.button`
   color: white;
   font-size: 45px;
   cursor: pointer;
-
+  position: absolute;
+  left: 50px;
   @media (min-width: 700px) {
     display: none;
   }
