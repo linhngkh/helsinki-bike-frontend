@@ -91,7 +91,7 @@ Homepage was shown by introducing Helsinki City Bike headline animated by Framer
 
   -  <b>Paginating</b> for huge rows of data
 
-<img width="200" alt="pagination" src="https://user-images.githubusercontent.com/44481142/228831249-7431f2ff-7e3e-4d0b-bfdb-30865820bc13.png">
+<img width="300" alt="pagination" src="https://user-images.githubusercontent.com/44481142/228831249-7431f2ff-7e3e-4d0b-bfdb-30865820bc13.png">
 
 
 #### [Additional](#Additional)
