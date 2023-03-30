@@ -69,6 +69,7 @@ Homepage was shown by introducing Helsinki City Bike headline animated by Framer
 
 
 - <b>Pagination</b>
+<img width="700" alt="Screenshot 2023-03-30 at 18 13 00" src="https://user-images.githubusercontent.com/44481142/228882820-8dd3afd3-e480-4ff7-91b0-3b8f1171e95f.png">
 
 
 - <b>Ordering per column</b> You can click on table headers's name and it automatically order alphabetically, even with distance and duration: 
