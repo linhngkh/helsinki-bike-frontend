@@ -98,18 +98,18 @@ Homepage was shown by introducing Helsinki City Bike headline animated by Framer
 ### [Single Stations View](#single-station-view)
 #### [Recommended](#Recommended)
  * Total number of journeys starting from the station
- <img width="500" alt="example2" src="https://user-images.githubusercontent.com/44481142/228785848-535da001-5d75-4ebf-b36b-c87db73e5120.png">
+ <img width="800" alt="example2" src="https://user-images.githubusercontent.com/44481142/228785848-535da001-5d75-4ebf-b36b-c87db73e5120.png">
 
  * Total number of journeys ending at the station
  
-<img width="500" alt="example1" src="https://user-images.githubusercontent.com/44481142/228785874-f170c1d6-4b49-40f6-bd0b-92105f20f1e6.png">
+<img width="800" alt="example1" src="https://user-images.githubusercontent.com/44481142/228785874-f170c1d6-4b49-40f6-bd0b-92105f20f1e6.png">
 
 #### [Additional](#Additional)
  - Top 5 most popular departure stations for journeys ending at the station by query
-<img width="500" alt="departure" src="https://user-images.githubusercontent.com/44481142/228786802-a469a210-404b-41fc-b9f8-75f9061d34dd.png">
+<img width="800" alt="departure" src="https://user-images.githubusercontent.com/44481142/228786802-a469a210-404b-41fc-b9f8-75f9061d34dd.png">
 
  - Top 5 most popular return stations for journeys starting from the station by query: 
- <img width="500" alt="return" src="https://user-images.githubusercontent.com/44481142/228786829-a7c10c1e-143a-4d1f-8d7e-11901cf0a15a.png">
+ <img width="800" alt="return" src="https://user-images.githubusercontent.com/44481142/228786829-a7c10c1e-143a-4d1f-8d7e-11901cf0a15a.png">
 
 
 ## Back End
