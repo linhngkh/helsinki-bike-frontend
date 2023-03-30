@@ -60,7 +60,8 @@ Homepage was shown by introducing Helsinki City Bike headline animated by Framer
     
 ### [Journeys Page](#journey-page)
 #### [Recommended](#Recommended)
-  <img width="200" alt="jpurneytable" src="https://user-images.githubusercontent.com/44481142/228830472-a8edf39f-4907-47cb-8fba-7aea6a1ebcc9.png">
+ <img width="400" alt="Screenshot 2023-03-30 at 15 19 20" src="https://user-images.githubusercontent.com/44481142/228834347-e3af3016-3e4f-405d-bbc4-4f59497a483a.png">
+
 
 #### [Additional](#Additional)
 - <b>Searching</b> by typing journey departure and return.
