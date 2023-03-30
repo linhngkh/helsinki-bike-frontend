@@ -36,7 +36,6 @@ To build development version of the UI to ``./dist``folder.
 
 <strong>``yarn deploy``</strong>
 To build and deploy to Netlify.
-
 The customized script is: 
 ```
 "deploy": "vite build && netlify deploy --prod"
@@ -54,27 +53,27 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 ### [Home Page](#home-page)
 Homepage was shown by introducing Helsinki City Bike headline animated by Framer Motion lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
     
-### [Journeys Table](#journey-table)
-#### Recommended
+### [Journeys Page](#journey-page)
+#### [Recommended](#Recommended)
   - <b>Searching</b> by typing journey departure and return.
-#### Additional
-### [Stations Table](#station-table)
-#### Recommended
+#### [Additional](#Additional)
+### [Stations Page](#station-page)
+#### [Recommended](#Recommended)
  - <b>Searching</b> by typing station name and address.
 
 Station Table component with useful built-in Material UI components and functions:
   -  <b>Ordering per column</b>: by clicking on the Header Name or Address, columns will be ordered automatically alphabetically.
   -  <b>Paginating</b> for huge rows of data
-#### Additional
+#### [Additional](#Additional)
 ### [Single Stations View](#single-station-view)
-#### Recommended
+#### [Recommended](#Recommended)
  * Total number of journeys starting from the station
  <img width="1003" alt="example2" src="https://user-images.githubusercontent.com/44481142/228785848-535da001-5d75-4ebf-b36b-c87db73e5120.png">
 
  *Total number of journeys ending at the station
 <img width="880" alt="example1" src="https://user-images.githubusercontent.com/44481142/228785874-f170c1d6-4b49-40f6-bd0b-92105f20f1e6.png">
 
-#### Additional
+#### [Additional](#Additional)
  - Top 5 most popular departure stations for journeys ending at the station by query
 <img width="1182" alt="departure" src="https://user-images.githubusercontent.com/44481142/228786802-a469a210-404b-41fc-b9f8-75f9061d34dd.png">
 
