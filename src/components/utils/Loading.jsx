@@ -5,6 +5,7 @@ const Container = styled.div`
             align-items: "center":
             justify-content: "center";
             padding: "20px";
+          
 `;
 
 const Loading = () => {
@@ -12,13 +13,11 @@ const Loading = () => {
     <Container>
       <Skeleton
         variant="rectangular"
-        width={"70%"}
+        width={"50%"}
         height={500}
         sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
           margin: "0 auto",
+          bgcolor: "gray",
         }}
       />
     </Container>
