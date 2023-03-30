@@ -3,8 +3,8 @@ import React from "react";
 import { TableSortLabel, TableHead, TableRow, TableCell } from "@mui/material";
 
 export const columns = [
-  { id: "Departure", label: "Departure", minWidth: 170 },
-  { id: "Return", label: "Return", minWidth: 170 },
+  { id: "Departure_station_name", label: "Departure", minWidth: 170 },
+  { id: "Return_station_name", label: "Return", minWidth: 170 },
   {
     id: "Covered_distance",
     label: "Distance(km)",

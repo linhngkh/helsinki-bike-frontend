@@ -155,7 +155,7 @@ const Journey = ({ journeys }) => {
       </TableContainer>
       {/* PAGINATION */}
       <TablePagination
-        rowsPerPageOptions={[20, 50, 200]}
+        rowsPerPageOptions={[20, 100, 500]}
         component="div"
         count={journeys.length}
         rowsPerPage={rowsPerPage}

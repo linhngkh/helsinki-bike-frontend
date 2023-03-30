@@ -14,7 +14,7 @@ const Journeys = () => {
     error,
     data: journeys,
     isFetching,
-  } = useQuery(["journeys", page], () => fetchJourney(page));
+  } = useQuery(["/journeys", page], () => fetchJourney(page));
 
   if (isLoading)
     return (
