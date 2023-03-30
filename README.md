@@ -1,4 +1,4 @@
-# Helsinki City Bike App
+# [Helsinki City Bike App](https://helsinki-citybikess.netlify.app/)
 A web-page to show journey and station bike information of Finland in mobile friendly version. 
 ## Project Description
 This project is the pre-assignment for [Solita Dev Academy Finland 2023](https://github.com/solita/dev-academy-2023-exercise).
@@ -68,7 +68,7 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 
 
 - <b>Pagination</b> with customized option to choose how many rows per page: 
-<img width="700" alt="Screenshot 2023-03-30 at 18 13 00" src="https://user-images.githubusercontent.com/44481142/228882820-8dd3afd3-e480-4ff7-91b0-3b8f1171e95f.png">
+<img width="300" alt="Screenshot 2023-03-30 at 18 13 00" src="https://user-images.githubusercontent.com/44481142/228882820-8dd3afd3-e480-4ff7-91b0-3b8f1171e95f.png">
 
 
 - <b>Ordering per column</b> You can click on table headers's name and it automatically order alphabetically, even with distance and duration: 
@@ -109,10 +109,10 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 
 #### [Additional](#Additional)
  - Top 5 most popular departure stations for journeys ending at the station by query
-<img width="900" alt="departure" src="https://user-images.githubusercontent.com/44481142/228786802-a469a210-404b-41fc-b9f8-75f9061d34dd.png">
+<img width="800" alt="departure" src="https://user-images.githubusercontent.com/44481142/228786802-a469a210-404b-41fc-b9f8-75f9061d34dd.png">
 
  - Top 5 most popular return stations for journeys starting from the station by query: 
- <img width="900" alt="return" src="https://user-images.githubusercontent.com/44481142/228786829-a7c10c1e-143a-4d1f-8d7e-11901cf0a15a.png">
+ <img width="800" alt="return" src="https://user-images.githubusercontent.com/44481142/228786829-a7c10c1e-143a-4d1f-8d7e-11901cf0a15a.png">
 
 
 ## Back End
