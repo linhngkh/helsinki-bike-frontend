@@ -69,12 +69,14 @@ Station Table component with useful built-in Material UI components and function
 ### [Single Stations View](#single-station-view)
 #### Recommended
  * Total number of journeys starting from the station
+ <img width="1003" alt="example2" src="https://user-images.githubusercontent.com/44481142/228785848-535da001-5d75-4ebf-b36b-c87db73e5120.png">
 
- ``db.citybikeCollection.aggregate([{$group:  {_id: "$Departure_station_name", count: {$sum:1}}}])``
 
  *Total number of journeys ending at the station
+<img width="880" alt="example1" src="https://user-images.githubusercontent.com/44481142/228785874-f170c1d6-4b49-40f6-bd0b-92105f20f1e6.png">
 
- ``db.citybikeCollection.aggregate([{$group:  {_id: "$Return_station_name", count: {$sum:1}}}])``
+
+
 #### Additional
  - Top 5 most popular departure stations for journeys ending at the station by query
 
