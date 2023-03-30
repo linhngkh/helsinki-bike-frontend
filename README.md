@@ -85,28 +85,30 @@ Homepage was shown by introducing Helsinki City Bike headline animated by Framer
 
 
   -  <b>Ordering per column</b>: by clicking on the Header Name or Address, columns will be ordered automatically alphabetically.
+<img width="100" alt="Screenshot 2023-03-30 at 15 12 26" src="https://user-images.githubusercontent.com/44481142/228832434-acdf3830-55ef-4cd7-a168-bd49982bf85f.png">
 
 
   -  <b>Paginating</b> for huge rows of data
 
-<img width="300" alt="pagination" src="https://user-images.githubusercontent.com/44481142/228831249-7431f2ff-7e3e-4d0b-bfdb-30865820bc13.png">
+<img width="200" alt="pagination" src="https://user-images.githubusercontent.com/44481142/228831249-7431f2ff-7e3e-4d0b-bfdb-30865820bc13.png">
 
 
 #### [Additional](#Additional)
 ### [Single Stations View](#single-station-view)
 #### [Recommended](#Recommended)
  * Total number of journeys starting from the station
- <img width="1003" alt="example2" src="https://user-images.githubusercontent.com/44481142/228785848-535da001-5d75-4ebf-b36b-c87db73e5120.png">
+ <img width="500" alt="example2" src="https://user-images.githubusercontent.com/44481142/228785848-535da001-5d75-4ebf-b36b-c87db73e5120.png">
 
- *Total number of journeys ending at the station
-<img width="880" alt="example1" src="https://user-images.githubusercontent.com/44481142/228785874-f170c1d6-4b49-40f6-bd0b-92105f20f1e6.png">
+ * Total number of journeys ending at the station
+ 
+<img width="500" alt="example1" src="https://user-images.githubusercontent.com/44481142/228785874-f170c1d6-4b49-40f6-bd0b-92105f20f1e6.png">
 
 #### [Additional](#Additional)
  - Top 5 most popular departure stations for journeys ending at the station by query
-<img width="1182" alt="departure" src="https://user-images.githubusercontent.com/44481142/228786802-a469a210-404b-41fc-b9f8-75f9061d34dd.png">
+<img width="500" alt="departure" src="https://user-images.githubusercontent.com/44481142/228786802-a469a210-404b-41fc-b9f8-75f9061d34dd.png">
 
  - Top 5 most popular return stations for journeys starting from the station by query: 
- <img width="1180" alt="return" src="https://user-images.githubusercontent.com/44481142/228786829-a7c10c1e-143a-4d1f-8d7e-11901cf0a15a.png">
+ <img width="500" alt="return" src="https://user-images.githubusercontent.com/44481142/228786829-a7c10c1e-143a-4d1f-8d7e-11901cf0a15a.png">
 
 
 ## Back End
