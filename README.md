@@ -73,6 +73,9 @@ Homepage was shown by introducing Helsinki City Bike headline animated by Framer
 
 - <b>Ordering per column</b> You can click on table headers's name and it automatically order alphabetically, even with distance and duration: 
 
+<img width="500" alt="ordering" src="https://user-images.githubusercontent.com/44481142/228853957-7d832e4d-5bae-43d8-a17e-8af2d6e862e2.png">
+
+
 
 
 ### [Stations Page](#station-page)
