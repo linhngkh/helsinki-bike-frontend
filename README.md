@@ -71,7 +71,7 @@ Homepage was shown by introducing Helsinki City Bike headline animated by Framer
 - <b>Pagination</b>
 
 
-- <b>Ordering per column</b>
+- <b>Ordering per column</b> You can click on table headers's name and it automatically order alphabetically, even with distance and duration: 
 
 
 
