@@ -86,14 +86,14 @@ Station Table component with useful built-in Material UI components and function
 ### [Handling Data](#datahandling)
 * To find and remove journeys that lasted for less than 10 seconds in MongoDB:
 
-``db.citybikeCollection.find({ Duration:  { $lt: 10 }}).pretty()``
+``db.Journeys.find({ Duration:  { $lt: 10 }}).pretty()``
 
-``db.citybikeCollection.deleteMany({ Duration: { $lt: 10 }} )``
+``db.Journeys.deleteMany({ Duration: { $lt: 10 }} )``
 * To find and remove journeys that covered distances shorter than 10 meters in MongoDB:
 
-``db.citybikeCollection.find({ Covered_distance:  { $lt: 10 }}).pretty()``
+``db.Journeys.find({ Covered_distance:  { $lt: 10 }}).pretty()``
 
-``db.citybikeCollection.deleteMany({ Covered_distance: { $lt: 10 }} )``
+``db.Journeys.deleteMany({ Covered_distance: { $lt: 10 }} )``
 ### [Database](#Database) 
   - MongoDB NoSQL database is chosen to hold a huge amount of data. 
   - Mongoose under the hood is chosen for building  straight-forward both journey + station Schema.
