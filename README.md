@@ -52,18 +52,46 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 
 ### [Home Page](#home-page)
 Homepage was shown by introducing Helsinki City Bike headline animated by Framer Motion lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
+   
+ <img width="200" alt="mobile view" src="https://user-images.githubusercontent.com/44481142/228831098-7f07299a-4b0e-426a-acaa-f9708dcedc35.png">
+
+    
+    
     
 ### [Journeys Page](#journey-page)
 #### [Recommended](#Recommended)
-  - <b>Searching</b> by typing journey departure and return.
+  <img width="200" alt="jpurneytable" src="https://user-images.githubusercontent.com/44481142/228830472-a8edf39f-4907-47cb-8fba-7aea6a1ebcc9.png">
+
 #### [Additional](#Additional)
+- <b>Searching</b> by typing journey departure and return.
+<img width="300" alt="searchbytyping" src="https://user-images.githubusercontent.com/44481142/228831346-86391847-0509-46f6-b8c1-559eac116bb1.png">
+
+
+- <b>Pagination</b>
+
+
+- <b>Ordering per column</b>
+
+
+
 ### [Stations Page](#station-page)
+
+<img width="300" alt="stationtable" src="https://user-images.githubusercontent.com/44481142/228830907-63f18a82-3326-47ad-9785-8c6fde72044b.png">
+
 #### [Recommended](#Recommended)
  - <b>Searching</b> by typing station name and address.
+<img width="538" alt="searchbytyping" src="https://user-images.githubusercontent.com/44481142/228831199-66bf5c5b-42c6-4cea-aca5-3a92fb5a2772.png">
 
-Station Table component with useful built-in Material UI components and functions:
+
+
   -  <b>Ordering per column</b>: by clicking on the Header Name or Address, columns will be ordered automatically alphabetically.
+
+
   -  <b>Paginating</b> for huge rows of data
+
+<img width="300" alt="pagination" src="https://user-images.githubusercontent.com/44481142/228831249-7431f2ff-7e3e-4d0b-bfdb-30865820bc13.png">
+
+
 #### [Additional](#Additional)
 ### [Single Stations View](#single-station-view)
 #### [Recommended](#Recommended)
