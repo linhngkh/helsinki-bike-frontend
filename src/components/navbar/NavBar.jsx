@@ -81,7 +81,7 @@ const NavBar = () => {
   const [extendNavBar, setExtendNavBar] = useState(false);
 
   return (
-    <NavBarContainer extendNavbar={extendNavBar}>
+    <NavBarContainer extendNavbar={extendNavBar} id="toggle">
       <Link to="/journeys">
         <NavButton>
           <Text>Journeys</Text>
