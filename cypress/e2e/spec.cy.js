@@ -29,11 +29,10 @@ describe("website", () => {
 
     // make an assertion on the input value
   });
-  //  JOURNEYS
-  // it("user goes to journey page", () => {
-  //   // user see table which contains its children:  thead, tbody, trow, td
-  //   // cy.get("table").children();
-  // });
+  //  JOURNEYS     
+    it("user goes to journey page", () => {
+    cy.visit("http://localhost:5206/journeys");
+  });
 });
 
 // API TESTING
