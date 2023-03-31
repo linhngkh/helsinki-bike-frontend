@@ -22,12 +22,23 @@ describe("website", () => {
     cy.contains("Stations").click();
     // user can click to navbar which contains URL
     cy.url().should("include", "/stations");
+
     //  JOURNEYS
     // user see table which contains its children:  thead, tbody, trow, td
     cy.get("table").children();
+    // make an assertion on the input value
+    cy.get("input.MuiInputBase-input.css-yz9k0d-MuiInputBase-input").should(
+      "have.value",
+      ""
+    );
 
     // STATIONS
     // user see table which contains its children:  thead, tbody, trow, td
     cy.get("table").children();
+    // make an assertion on the input value
+    cy.get("input.MuiInputBase-input.css-yz9k0d-MuiInputBase-input").should(
+      "have.value",
+      ""
+    );
   });
 });

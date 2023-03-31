@@ -156,6 +156,7 @@ This is the first time I handle a huge amount of database & API and this assignm
 
 I learn to deploy backend on Docker because not only I want to surprise you but also I see how useful Docker is.
 
+This is the first time I get to know and execute Cypress Testing and the task is really fun and informative. It seems to be the same when I use Chrome Dev Tool to debug errors. 
 
 I know that my app is still incomplete as a normal travel app, both frontend and backend. Therefore, there still be a ground for improving it in the future.
 - [Project Improvement](#improvement)
