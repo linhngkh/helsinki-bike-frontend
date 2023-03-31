@@ -44,7 +44,7 @@ The customized script is:
 The frontend is made with React.js combined with Vite for faster dev-server and web development, managed by Yarn package. In term of mobile interface, this app also works well and responsive.
 
 Main Dependencies: 
-* [API Fetching](https://tanstack.com/query/v3/)
+* [React Query](https://tanstack.com/query/v3/)
 Instead of using useEffect hook, React Query is my new favourable auto-managed queries.
 * [React Router](https://reactrouter.com/en/main)
 Besides navigating seamlessly between each page, I also use useParams hook for accessing dynamically params from current Single Station URL. 

@@ -7,8 +7,8 @@ import Typography from "@mui/material/Typography";
 const SingleStation = (props) => {
   //create route parameters
   const { id } = useParams();
-  const address = props.Osoite;
-  const city = props.Kaupunki;
+  const lat = props.x;
+  const long = props.y;
 
   return (
     <Card
@@ -26,12 +26,12 @@ const SingleStation = (props) => {
           width="100%"
           height="500"
           style={{ border: "none" }}
-          src="https://maps.google.com/maps?hl=en&amp;q=${address}+${city}&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          src={`https://maps.google.com/maps?q=${lat}+${long}&t=&z=13&ie=UTF8&iwloc=B&output=embed`}
         ></iframe>
       </CardContent>
       <CardContent>
         <Typography gutterBottom variant="h6" component="div">
-          Name
+          Name {name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           Address
