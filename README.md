@@ -136,7 +136,7 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 - When working with data in backend, I also make pagination to avoid crashing by querying: 
 ``db.Journeys.find().skip().limit()``
 ## [Testing](#testing)
-Cypress E2E testing was implemented to see user interface routings from first time a user visits home page, then going through Journey and finally Station page. 
+Cypress E2E testing was implemented to see user interface routings from first time a user visits home page, then going through Journey and finally Station page to find/ search for all information by interacting with table.
 ## [Project Reflection](#Project-reflection)
 - [*What was my motivation? Why did I build this project?*](#motivation)
 
