@@ -51,12 +51,12 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 * [Material UI](https://mui.com/material-ui/react-table/) 
 
 ### [Home Page](#home-page)
- - Homepage was shown by introducing Helsinki City Bike headline animated by Framer Motion lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
+ - Homepage was shown by introducing Helsinki City Bike headline animated by [Framer Motion](https://github.com/framer) lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
    
  <img width="200" alt="mobile view" src="https://user-images.githubusercontent.com/44481142/228831098-7f07299a-4b0e-426a-acaa-f9708dcedc35.png">
 
     
- - For better user interface, Tooltip and Skeleton components are added for providing briefly about search-by-typing function and for showing initial loading data respectively.  
+ - For better user interface, Tooltip and Skeleton MUI components are added for providing briefly about search-by-typing function and for showing initial loading data respectively.  
 ### [Journeys Page](#journey-page)
 #### [Recommended](#Recommended)
  <img width="400" alt="Screenshot 2023-03-30 at 15 19 20" src="https://user-images.githubusercontent.com/44481142/228834347-e3af3016-3e4f-405d-bbc4-4f59497a483a.png">
