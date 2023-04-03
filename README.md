@@ -16,7 +16,6 @@ This project is the pre-assignment for [Solita Dev Academy Finland 2023](https:/
 5. [Project Reflection](#project-reflection)
 6. [License](#license)
 
-
 ## Development environment
 ### Requirement
 To run the site locally, I recommend using:
