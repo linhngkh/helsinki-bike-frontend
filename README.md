@@ -66,18 +66,16 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 - <b>Searching-by-typing</b> journey departure and return.
 <img width="300" alt="searchbytyping" src="https://user-images.githubusercontent.com/44481142/228831346-86391847-0509-46f6-b8c1-559eac116bb1.png">
 
-
+---
 - <b>Pagination</b> with customized option to choose how many rows per page: 
 <img width="500" alt="Screenshot 2023-03-30 at 18 13 00" src="https://user-images.githubusercontent.com/44481142/228882820-8dd3afd3-e480-4ff7-91b0-3b8f1171e95f.png">
 
-
+---
 - <b>Ordering per column</b> You can click on table headers's name and it automatically order alphabetically, even with distance and duration: 
 
 <img width="500" alt="ordering" src="https://user-images.githubusercontent.com/44481142/228853957-7d832e4d-5bae-43d8-a17e-8af2d6e862e2.png">
 
-
-
-
+---
 ### [Stations Page](#station-page)
 
 <img width="300" alt="stationtable" src="https://user-images.githubusercontent.com/44481142/228830907-63f18a82-3326-47ad-9785-8c6fde72044b.png">
@@ -86,12 +84,12 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
  - <b>Searching-by-typing</b> station name and address.
 <img width="300" alt="searchbytyping" src="https://user-images.githubusercontent.com/44481142/228831199-66bf5c5b-42c6-4cea-aca5-3a92fb5a2772.png">
 
-
+---
   - <b>Ordering per column</b>: by clicking on the Header Name or Address, columns will be ordered automatically alphabetically.
 
  <img width="200" alt="Screenshot 2023-03-30 at 15 12 26" src="https://user-images.githubusercontent.com/44481142/228832434-acdf3830-55ef-4cd7-a168-bd49982bf85f.png">
 
-
+---
   -  <b>Paginating</b> for huge rows of data with customized option to choose how many rows per page: 
 
 <img width="300" alt="pagination" src="https://user-images.githubusercontent.com/44481142/228831249-7431f2ff-7e3e-4d0b-bfdb-30865820bc13.png">
