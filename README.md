@@ -48,7 +48,7 @@ Main Dependencies:
 Instead of using useEffect hook, React Query is my new favourable auto-managed queries.
 * [React Router](https://reactrouter.com/en/main)
 Besides navigating seamlessly between each page, I also use useParams hook for accessing dynamically params from current Single Station URL. 
-* [Material UI](https://mui.com/material-ui/react-table/) 
+* [Material UI](https://mui.com/material-ui/react-table/)
 
 ### [Home Page](#home-page)
  - Homepage was shown by introducing Helsinki City Bike headline animated by [Framer Motion](https://github.com/framer) lib. It was displayed also the hero video which were cut from Helsinki City Bike's Youtube video.
