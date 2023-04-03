@@ -2,7 +2,7 @@ describe("website", () => {
   it("user visit homepage", () => {
     // HOMEPAGE
     // user visit homepage
-    cy.visit("http://localhost:5206/");
+    cy.visit("http://localhost:5173/");
     //user see website from mobile viewpoint
     cy.viewport("iphone-6");
     // toogle button will be shown from mobile device
@@ -23,15 +23,15 @@ describe("website", () => {
     cy.contains("Stations").click();
     // user can click to navbar which contains URL
     cy.url().should("include", "/stations");
-
-    // STATIONS
-    // user see table which contains its children:  thead, tbody, trow, td
-
-    // make an assertion on the input value
   });
-  //  JOURNEYS     
-    it("user goes to journey page", () => {
-    cy.visit("http://localhost:5206/journeys");
+
+  //  JOURNEYS
+  it("user goes to journey page and see table pagination", () => {
+    cy.visit("http://localhost:5173/journeys");
+    //table has multiple pages
+    cy.get(
+      "div.MuiToolbar-root.MuiToolbar-gutters.MuiToolbar-regular.MuiTablePagination-toolbar.css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar"
+    ).should("have.length", "1");
   });
 });
 
