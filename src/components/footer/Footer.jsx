@@ -21,9 +21,10 @@ const Anchor = styled.a`
 `;
 
 const Footer = () => {
+  const thisYear = new Date().getFullYear();
   return (
     <FooterContainer>
-      <Text>&#169; 2023 Linh Nguyen - Write code with love!</Text>
+      <Text>&#169; {thisYear} Linh Nguyen - Write code with love!</Text>
       <Anchor
         href="https://github.com/linh-nguyenkhanh/helsinki-bike-frontend"
         target="_blank"

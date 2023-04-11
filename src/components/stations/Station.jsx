@@ -128,17 +128,12 @@ const Station = ({ stations }) => {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((station, _index) => {
                 return (
-                  <TableRow
-                    hover
-                    role="checkbox"
-                    tabIndex={-1}
-                    key={station._index}
-                  >
+                  <TableRow hover role="checkbox" tabIndex={-1} key={_index}>
                     {/* mapping column with station data's rows */}
-                    {headers.map((header) => {
+                    {headers.map((header, index) => {
                       const value = station[header.id];
                       return (
-                        <TableCell key={header.index}>
+                        <TableCell key={index}>
                           <Link
                             to={`/stations/${station.ID}`}
                             style={{ textDecoration: "none", color: "black" }}

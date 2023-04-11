@@ -4,11 +4,11 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
-const SingleStation = (props) => {
+const SingleStation = ({ Osoite, Kaupunki }) => {
   //create route parameters
   const { id } = useParams();
-  const lat = props.x;
-  const long = props.y;
+  const address = Osoite;
+  const city = Kaupunki;
 
   return (
     <Card
@@ -26,7 +26,7 @@ const SingleStation = (props) => {
           width="100%"
           height="500"
           style={{ border: "none" }}
-          src={`https://maps.google.com/maps?q=${lat}+${long}&t=&z=13&ie=UTF8&iwloc=B&output=embed`}
+          src={`https://maps.google.com/maps?q=${address}+${city}&t=&z=13&ie=UTF8&iwloc=B&output=embed`}
         ></iframe>
       </CardContent>
       <CardContent>
