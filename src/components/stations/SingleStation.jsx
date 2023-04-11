@@ -4,11 +4,11 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
-const SingleStation = ({ Osoite, Kaupunki }) => {
+const SingleStation = (props) => {
   //create route parameters
   const { id } = useParams();
-  const address = Osoite;
-  const city = Kaupunki;
+  const address = props.Osoite;
+  const city = props.Kaupunki;
 
   return (
     <Card

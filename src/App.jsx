@@ -12,17 +12,14 @@ import Stations from "./components/stations/Stations";
 import SingleStation from "./components/stations/SingleStation";
 import "./index.css";
 
-function App({ Osoite, Kaupunki }) {
+function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<Root />}>
         <Route index element={<Home />} />
         <Route path="/journeys" element={<Journeys />} />
         <Route path="/stations" element={<Stations />} />
-        <Route
-          path="/stations/:id"
-          element={<SingleStation Osoite={Osoite} Kaupunki={Kaupunki} />}
-        />
+        <Route path="/stations/:id" element={<SingleStation />} />
       </Route>
     )
   );
