@@ -98,10 +98,10 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 #### [Additional](#Additional)
 ### [Single Stations View](#single-station-view) (Not yet finished)
 #### [Recommended](#Recommended)
- * Total number of journeys starting from the station
+ * Total number of journeys starting from the station: 3 first examples
  <img width="800" alt="example2" src="https://user-images.githubusercontent.com/44481142/228785848-535da001-5d75-4ebf-b36b-c87db73e5120.png">
 
- * Total number of journeys ending at the station
+ * Total number of journeys ending at the station: 3 first examples
  
 <img width="800" alt="example1" src="https://user-images.githubusercontent.com/44481142/228785874-f170c1d6-4b49-40f6-bd0b-92105f20f1e6.png">
 
