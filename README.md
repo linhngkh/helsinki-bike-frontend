@@ -19,7 +19,8 @@ This project is the pre-assignment for [Solita Dev Academy Finland 2023](https:/
 ## Development environment
 ### Requirement
 To run the site locally, I recommend using:
-``node.js v18``
+  * Node.js v18 or above (v19.8.1)
+  * NPM: 9.5.1
 ### Environment setup
 1. Install Node.js
 2. Clone the repository:
