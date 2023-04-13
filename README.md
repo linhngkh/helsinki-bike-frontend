@@ -161,11 +161,11 @@ This is the first time I get to know and execute Cypress Testing and the task is
 
 I know that my app is still incomplete as a normal travel app, both frontend and backend. Therefore, there still be a ground for improving it in the future.
 - [Project Improvement](#improvement)
-Some features I hope to implement in the future is about:  
+Some features I hope I will gain more knowledge and implement into in the future are about:   
+  * try to figure it out and show Single Station with map dynamically.
   * concentrate on unit testings for all components functionally.
   * create more endpoints / routings for user finding info.
   * ensure handle error middleware for each user routing context if they search for more info.
-
 
 ## [License](#License)
 Journey data file and video are own by [City Bike Finland](https://www.citybikefinland.fi/)
