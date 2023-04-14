@@ -138,6 +138,9 @@ Besides navigating seamlessly between each page, I also use useParams hook for a
 Cypress E2E testing was implemented to see user interface routings from first time a user visits home page, then going through Journey and finally Station page to find/ search for all information by interacting with table.
 
 Starting Cypress by command line ``yarn run cypress open``, then choosing E2E Testing option and launching the test with Chrome or Electron browser. 
+
+
+
 ## [Project Reflection](#Project-reflection)
 - [*What was my motivation? Why did I build this project?*](#motivation)
 
