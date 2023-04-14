@@ -139,11 +139,9 @@ Cypress E2E testing was implemented to see user interface routings from first ti
 
 Starting Cypress by command line ``yarn run cypress open``, then choosing E2E Testing option and launching the test with Chrome or Electron browser. 
 
-<<<<<<< HEAD
-=======
-<img width="626" alt="test" src="https://user-images.githubusercontent.com/44481142/231962105-57600fd5-f898-47a3-a14c-2edcadc596e0.png">
+To make the test having all passed, you must run backend file on port 5173 ``http://localhost:5173/``or you can change the port on ``cypress/e2e/spec.cy.js``. Also running backend links: ``http://localhost:5000/api/stations`` and ``http://localhost:5000/api/journeys``
 
->>>>>>> 8a934010d0353db0b9ff49dbbd53f2134f62d366
+<img width="626" alt="test" src="https://user-images.githubusercontent.com/44481142/231962105-57600fd5-f898-47a3-a14c-2edcadc596e0.png">
 
 
 ## [Project Reflection](#Project-reflection)
