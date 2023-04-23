@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:5000/api";
+const baseURL = "https://helsinki-bike-backend.vercel.app/api";
 
 export const axiosFetch = axios.create({
   baseURL: baseURL,

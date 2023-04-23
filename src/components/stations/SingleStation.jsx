@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React  from "react";
 import { useParams } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-
+import { useLoaderData } from "react-router-dom";
 const SingleStation = (props) => {
+  const stations = useLoaderData();
   //create route parameters
   const { id } = useParams();
   const address = props.Osoite;
@@ -21,6 +22,12 @@ const SingleStation = (props) => {
         minHeight: "60vh",
       }}
     >
+      {stations.map((station, id) => (
+        <Link key={id} to="stations/:id">
+          {station.Nimi}
+        </Link>
+      ))}
+
       <CardContent style={{ width: "100%" }}>
         <iframe
           width="100%"
