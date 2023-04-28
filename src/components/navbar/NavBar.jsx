@@ -13,7 +13,7 @@ const NavBarContainer = styled.nav`
   height: ${(props) => (props.extendNavbar ? "100vh" : "80px")};
   background-color: black;
   gap: 10px;
-
+  font-size: 16px;
   @media (min-width: 700px) {
     height: 80px;
   }
@@ -25,7 +25,7 @@ const HamburgerButton = styled.button`
   background: none;
   border: none;
   color: white;
-  font-size: 45px;
+  font-size: 40px;
   cursor: pointer;
   position: absolute;
   left: 50px;
@@ -34,11 +34,7 @@ const HamburgerButton = styled.button`
   }
 `;
 
-const Logo = styled.div``;
 
-const LogoImage = styled.img`
-  width: 50px;
-`;
 const Text = styled.h5`
   font-family: "Righteous", cursive;
   font-size: 25px;
@@ -82,21 +78,31 @@ const NavBar = () => {
 
   return (
     <NavBarContainer extendNavbar={extendNavBar} id="toggle">
+      <Link to="/">
+        <NavButton>
+          <Text>Home</Text>
+        </NavButton>
+      </Link>
       <Link to="/journeys">
         <NavButton>
           <Text>Journeys</Text>
         </NavButton>
       </Link>
-      <Logo>
+      {/* <Logo>
         <Link to="/">
           <NavButton>
             <LogoImage src="https://m.media-amazon.com/images/I/51-G-vCgr2L.png" />
           </NavButton>
         </Link>
-      </Logo>
+      </Logo> */}
       <Link to="/stations">
         <NavButton>
           <Text>Stations</Text>
+        </NavButton>
+      </Link>
+      <Link to="/map">
+        <NavButton>
+          <Text>Map</Text>
         </NavButton>
       </Link>
       {/* hamburger bar for mobile size */}
