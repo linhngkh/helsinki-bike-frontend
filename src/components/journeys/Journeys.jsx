@@ -28,7 +28,9 @@ const Journeys = () => {
 
   return (
     <Container>
-      <Typography variant="h5">All City Bikes Journeys</Typography>
+      <Typography variant="h5" sx={{ color: "#ffffff" }}>
+        All City Bikes Journeys
+      </Typography>
       {isFetching && (
         <div>
           <Loading />

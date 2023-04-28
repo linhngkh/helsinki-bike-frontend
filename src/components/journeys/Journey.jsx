@@ -84,7 +84,7 @@ const Journey = ({ journeys }) => {
       }}
     >
       {/* SEARCH BAR */}
-      <AppBar position="static" sx={{ bgcolor: "#767676" }}>
+      <AppBar position="static" sx={{ bgcolor: "#000000", paddingX: "10px" }}>
         <Box
           component="span"
           sx={{
@@ -100,18 +100,16 @@ const Journey = ({ journeys }) => {
             inputProps={{ "aria-label": "search" }}
             sx={{ color: "white", padding: "10px", width: "20rem" }}
           />
-          <Typography
-            variant="body"
-            noWrap
-            component="div"
-            sx={{ display: { xs: "none", sm: "block" } }}
-          >
-            JOURNEYS
-          </Typography>
         </Box>
       </AppBar>
       {/* TABLE */}
-      <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
+      <TableContainer
+        sx={{
+          maxHeight: 440,
+          padding: "10px",
+          background: "black",
+        }}
+      >
         <Table stickyHeader aria-label="sticky table">
           <TableHeader
             valueToOrderBy={valueToOrderBy}
@@ -141,13 +139,21 @@ const Journey = ({ journeys }) => {
                     role="checkbox"
                     tabIndex={-1}
                     key={journey._id}
+                    style={{ textDecoration: "none" }}
                   >
-                    <TableCell>{journey.Departure_station_name}</TableCell>
-                    <TableCell>{journey.Return_station_name}</TableCell>
-                    <TableCell>
+                    <TableCell sx={{ color: "#d4ff00e8" }}>
+                      {journey.Departure_station_name}
+                    </TableCell>
+                    <TableCell sx={{ color: "#d4ff00e8" }}>
+                      {journey.Return_station_name}
+                    </TableCell>
+                    <TableCell sx={{ color: "#d4ff00e8" }}>
                       {(journey.Covered_distance / 1000).toFixed(2)}
                     </TableCell>
-                    <TableCell>{(journey.Duration / 60).toFixed(2)}</TableCell>
+                    <TableCell sx={{ color: "#d4ff00e8" }}>
+                      {" "}
+                      {(journey.Duration / 60).toFixed(2)}
+                    </TableCell>
                   </TableRow>
                 );
               })}
@@ -156,6 +162,7 @@ const Journey = ({ journeys }) => {
       </TableContainer>
       {/* PAGINATION */}
       <TablePagination
+        sx={{ background: "black", color: "white" }}
         rowsPerPageOptions={[20, 100, 500, 1000]}
         component="div"
         count={journeys.length}

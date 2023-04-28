@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import Loading from "../utils/Loading";
 import Station from "./Station";
 import { Container } from "../utils/Styled";
+import { Typography } from "@mui/material";
 
 const Stations = () => {
   const [page, setPage] = useState(0);
@@ -26,6 +27,9 @@ const Stations = () => {
 
   return (
     <Container>
+      <Typography variant="h5" sx={{ color: "#ffffff" }}>
+        All City Bikes Stations
+      </Typography>
       {isFetching && (
         <div>
           <Loading />

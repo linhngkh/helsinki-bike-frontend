@@ -25,6 +25,8 @@ const TableHeader = (props) => {
               minWidth: header.minWidth,
               fontSize: "20px",
               fontWeight: "bold",
+              background: "black",
+              color: "white",
             }}
           >
             <TableSortLabel

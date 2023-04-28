@@ -54,7 +54,7 @@ const Station = ({ stations }) => {
   const [valueToOrderBy, setValueToOrderBy] = useState("id");
 
   // states for pagination
-  const [rowsPerPage, setRowsPerPage] = React.useState(20);
+  const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [page, setPage] = useState(0);
 
   // state for search name
@@ -81,14 +81,14 @@ const Station = ({ stations }) => {
     <Paper
       sx={{
         width: "40%",
-        overflow: "hidden",
         margin: "20px auto",
         boxShadow: 3,
         borderRadius: "10px",
+        background: "black",
       }}
     >
       {/* SEARCH BAR */}
-      <AppBar position="static" sx={{ bgcolor: "#767676" }}>
+      <AppBar position="static" sx={{ bgcolor: "black" }}>
         <Box
           component="span"
           sx={{ display: "flex", alignItems: "center", marginLeft: "20px" }}
@@ -110,7 +110,7 @@ const Station = ({ stations }) => {
         </Box>
       </AppBar>
       {/* TABLE */}
-      <TableContainer sx={{ maxHeight: 440, padding: "10px" }}>
+      <TableContainer sx={{ maxHeight: 440 }}>
         <Table stickyHeader aria-label="sticky table">
           <TableHeader
             valueToOrderBy={valueToOrderBy}
@@ -142,7 +142,11 @@ const Station = ({ stations }) => {
                         <TableCell key={index}>
                           <Link
                             to={`/stations/${station.ID}`}
-                            style={{ textDecoration: "none", color: "black" }}
+                            style={{
+                              padding: "none",
+                              textDecoration: "none",
+                              color: "#d4ff00e8",
+                            }}
                           >
                             {header.format && typeof value === "number"
                               ? header.format(value)
@@ -159,7 +163,8 @@ const Station = ({ stations }) => {
       </TableContainer>
       {/* PAGINATION */}
       <TablePagination
-        rowsPerPageOptions={[20, 50, 200]}
+        sx={{ color: "white" }}
+        rowsPerPageOptions={[10, 50, 200]}
         component="div"
         count={stations.length}
         rowsPerPage={rowsPerPage}

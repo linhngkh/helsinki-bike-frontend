@@ -40,28 +40,6 @@ const Title = styled.h1`
   -webkit-text-stroke: 0.5px white;
 `;
 
-const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-
-  @media (max-width: 700px) {
-    display: none;
-  }
-`;
-
-const Ulist = styled.ul``;
-
-const ButtonGroup = styled(Button)`
-  color: white;
-  margin-left: 15px;
-
-  &:hover {
-    background-color: #b45309;
-  }
-`;
-
 const LandingPage = () => {
   return (
     <m.div
@@ -80,17 +58,6 @@ const LandingPage = () => {
           >
             <Title>HELSINKI CITY BIKES </Title>
           </m.div>
-          <ButtonContainer>
-            <Ulist variants={container} initial="hidden" animate="show">
-              {" "}
-              <Link to="/journeys">
-                <ButtonGroup>VIEW JOURNEYS</ButtonGroup>
-              </Link>
-              <Link to="/stations">
-                <ButtonGroup>VIEW STATIONS</ButtonGroup>
-              </Link>
-            </Ulist>
-          </ButtonContainer>
         </Container>
       </BigContainer>
       <Footer />
