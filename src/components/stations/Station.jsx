@@ -83,10 +83,12 @@ const Station = ({ stations }) => {
         width: "40%",
         overflow: "hidden",
         margin: "20px auto",
+        boxShadow: 3,
+        borderRadius: "10px",
       }}
     >
       {/* SEARCH BAR */}
-      <AppBar position="static" sx={{ background: "#24292f" }}>
+      <AppBar position="static" sx={{ bgcolor: "#767676" }}>
         <Box
           component="span"
           sx={{ display: "flex", alignItems: "center", marginLeft: "20px" }}
@@ -96,7 +98,11 @@ const Station = ({ stations }) => {
             placeholder="Search by typing name or address"
             inputProps={{ "aria-label": "search" }}
             onChange={(e) => setSearch(e.target.value)}
-            sx={{ color: "white", padding: "10px", width: "20rem" }}
+            sx={{
+              color: "white",
+              padding: "10px",
+              width: "20rem",
+            }}
           />
           <Tooltip title="Search by info of row shown per page" arrow>
             <TipsAndUpdatesIcon>Arrow</TipsAndUpdatesIcon>

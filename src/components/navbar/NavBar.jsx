@@ -13,7 +13,7 @@ const NavBarContainer = styled.nav`
   height: ${(props) => (props.extendNavbar ? "100vh" : "80px")};
   background-color: black;
   gap: 10px;
-  font-size: 16px;
+  font-size: 14px;
   @media (min-width: 700px) {
     height: 80px;
   }
@@ -34,11 +34,10 @@ const HamburgerButton = styled.button`
   }
 `;
 
-
 const Text = styled.h5`
   font-family: "Righteous", cursive;
-  font-size: 25px;
-  color: white;
+  font-size: 20px;
+  color: #ffffff;
 
   &:focus,
   &:active {

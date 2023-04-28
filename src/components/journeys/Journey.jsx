@@ -80,10 +80,11 @@ const Journey = ({ journeys }) => {
         width: "55%",
         overflow: "hidden",
         margin: "20px auto",
+        borderRadius: "10px",
       }}
     >
       {/* SEARCH BAR */}
-      <AppBar position="static" sx={{ background: "#24292f" }}>
+      <AppBar position="static" sx={{ bgcolor: "#767676" }}>
         <Box
           component="span"
           sx={{

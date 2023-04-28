@@ -17,7 +17,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  min-height: 90vh;
   margin: 0 auto;
 `;
 

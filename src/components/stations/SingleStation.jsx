@@ -1,9 +1,9 @@
 import React  from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLoaderData } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import { useLoaderData } from "react-router-dom";
+
 const SingleStation = (props) => {
   const stations = useLoaderData();
   //create route parameters

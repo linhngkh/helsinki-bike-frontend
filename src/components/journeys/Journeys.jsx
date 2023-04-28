@@ -4,6 +4,7 @@ import { fetchJourney } from "../../api/axios";
 import Journey from "././Journey";
 import Loading from "../utils/Loading";
 import { Container } from "../utils/Styled";
+import { Typography } from "@mui/material";
 
 const Journeys = () => {
   const [page, setPage] = useState(0);
@@ -27,6 +28,7 @@ const Journeys = () => {
 
   return (
     <Container>
+      <Typography variant="h5">All City Bikes Journeys</Typography>
       {isFetching && (
         <div>
           <Loading />
