@@ -12,7 +12,6 @@ import {
   Box,
   AppBar,
   InputBase,
-  Typography,
 } from "@mui/material";
 
 // condition when "b" in order bigger than "a" in order then return 1 and vice versa
@@ -96,9 +95,9 @@ const Journey = ({ journeys }) => {
           <DirectionsBikeIcon />
           <InputBase
             onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search by typing name or address"
+            placeholder="Search by name or address"
             inputProps={{ "aria-label": "search" }}
-            sx={{ color: "white", padding: "10px", width: "20rem" }}
+            sx={{ color: "white", width: "20rem" }}
           />
         </Box>
       </AppBar>

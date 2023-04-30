@@ -95,12 +95,11 @@ const Station = ({ stations }) => {
         >
           <DirectionsBikeIcon />
           <InputBase
-            placeholder="Search by typing name or address"
+            placeholder="Search by name or address"
             inputProps={{ "aria-label": "search" }}
             onChange={(e) => setSearch(e.target.value)}
             sx={{
               color: "white",
-              padding: "10px",
               width: "20rem",
             }}
           />
@@ -143,7 +142,6 @@ const Station = ({ stations }) => {
                           <Link
                             to={`/stations/${station.ID}`}
                             style={{
-                              padding: "none",
                               textDecoration: "none",
                               color: "#d4ff00e8",
                             }}

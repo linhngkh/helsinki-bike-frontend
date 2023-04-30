@@ -10,6 +10,6 @@ body {
   font-family: "Righteous", cursive;
   font-size: 16px;
 }
-.css-1ex1afd-MuiTableCell-root {
+.MuiContainer-disableGutters {
   padding: none !important;
 }
