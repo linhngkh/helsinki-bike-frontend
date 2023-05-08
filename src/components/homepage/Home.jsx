@@ -1,9 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "../utils/Styled";
-import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
-import { container } from "../utils/Animations";
 import Footer from "../footer/Footer";
 import bgVideo from "../../assets/bgVideo.mp4";
 
