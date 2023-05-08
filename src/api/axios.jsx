@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const baseURL = "https://helsinki-bike-backend.vercel.app/api";
+const baseURL =
+  "https://helsinki-bike-backend-6io18ii9d-linh-nguyenkhanh.vercel.app/api/";
 
 export const axiosFetch = axios.create({
   baseURL: baseURL,
