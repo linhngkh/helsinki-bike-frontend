@@ -98,11 +98,7 @@ const NavBar = () => {
           <Text>Stations</Text>
         </NavButton>
       </Link>
-      <Link to="/map">
-        <NavButton>
-          <Text>Map</Text>
-        </NavButton>
-      </Link>
+
       {/* hamburger bar for mobile size */}
       <HamburgerButton
         onClick={() => {

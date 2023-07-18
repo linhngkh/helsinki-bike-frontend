@@ -16,7 +16,6 @@ export const fetchJourney = async () => {
 
 export const fetchStation = async () => {
   const response = await axiosFetch.get(`/stations`);
-  console.log(response.data);
   const stations = response.data;
   return stations;
 };
