@@ -9,7 +9,6 @@ import Journeys from "./components/journeys/Journeys";
 import Home from "./components/homepage/Home";
 import NavBar from "./components/navbar/NavBar";
 import Stations from "./components/stations/Stations";
-import SingleStation from "./components/stations/SingleStation";
 import "./index.css";
 import { stationLoader } from "./components/utils/stationLoader";
 
@@ -19,13 +18,7 @@ function App() {
       <Route path="/" element={<Root />}>
         <Route index element={<Home />} />
         <Route path="/journeys" element={<Journeys />} />
-        <Route path="/stations" element={<Stations />}>
-          <Route
-            path="/stations/:id"
-            element={<SingleStation />}
-            loader={stationLoader}
-          />
-        </Route>
+        <Route path="/stations" element={<Stations />}></Route>
       </Route>
     )
   );
