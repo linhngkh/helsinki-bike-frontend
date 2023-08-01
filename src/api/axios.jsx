@@ -21,7 +21,6 @@ export const fetchStation = async () => {
 };
 export const fetchStationId = async () => {
   const response = await axiosFetch.get(`/stations/${id}`);
-  console.log(response.data);
   console.log("🚀 ~ file: axios.jsx:25 ~ fetchStationId ~ response:", response);
   const stationId = response.data;
   return stationId;

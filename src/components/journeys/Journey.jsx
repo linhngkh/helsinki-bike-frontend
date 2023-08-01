@@ -131,7 +131,7 @@ const Journey = ({ journeys }) => {
                       item.Return_station_name.toLowerCase().includes(search);
               }) // slice pagination
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-              .map((journey, _id) => {
+              .map((journey) => {
                 return (
                   <TableRow
                     hover

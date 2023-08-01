@@ -135,10 +135,10 @@ const Station = ({ stations }) => {
                 return (
                   <TableRow hover role="checkbox" tabIndex={-1} key={_index}>
                     {/* mapping column with station data's rows */}
-                    {headers.map((header, index) => {
+                    {headers.map((header) => {
                       const value = station[header.id];
                       return (
-                        <TableCell key={index}>
+                        <TableCell key={header.id}>
                           <Link
                             to={`/stations/${station.ID}`}
                             style={{
