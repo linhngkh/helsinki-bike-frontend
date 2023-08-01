@@ -10,7 +10,6 @@ import Home from "./components/homepage/Home";
 import NavBar from "./components/navbar/NavBar";
 import Stations from "./components/stations/Stations";
 import "./index.css";
-import { stationLoader } from "./components/utils/stationLoader";
 
 function App() {
   const router = createBrowserRouter(

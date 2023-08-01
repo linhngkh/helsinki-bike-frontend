@@ -6,6 +6,13 @@ import Loading from "../utils/Loading";
 import { Container } from "../utils/Styled";
 import { Typography } from "@mui/material";
 
+const styles = {
+  h5: {
+    color: "#ffffff",
+    marginTop: "10px",
+  },
+};
+
 const Journeys = () => {
   const [page, setPage] = useState(0);
 
@@ -28,7 +35,7 @@ const Journeys = () => {
 
   return (
     <Container>
-      <Typography variant="h5" sx={{ color: "#ffffff", marginTop: "10px" }}>
+      <Typography variant="h5" style={styles.h5}>
         All City Bikes Journeys
       </Typography>
 

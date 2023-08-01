@@ -86,13 +86,6 @@ const NavBar = () => {
           <Text>Journeys</Text>
         </NavButton>
       </Link>
-      {/* <Logo>
-        <Link to="/">
-          <NavButton>
-            <LogoImage src="https://m.media-amazon.com/images/I/51-G-vCgr2L.png" />
-          </NavButton>
-        </Link>
-      </Logo> */}
       <Link to="/stations">
         <NavButton>
           <Text>Stations</Text>
@@ -115,19 +108,17 @@ const NavBar = () => {
           </div>
         )}
       </HamburgerButton>
+
       {/* navbar container for mobile size */}
       {extendNavBar && (
         <NavbarExtendedContainer>
           <Text>
-            {" "}
             <NavBarLinkExtended to="/">Home</NavBarLinkExtended>
           </Text>
           <Text>
-            {" "}
             <NavBarLinkExtended to="/journeys">Journeys</NavBarLinkExtended>
           </Text>
           <Text>
-            {" "}
             <NavBarLinkExtended to="/stations">Stations</NavBarLinkExtended>
           </Text>
         </NavbarExtendedContainer>
