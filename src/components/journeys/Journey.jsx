@@ -150,7 +150,6 @@ const Journey = ({ journeys }) => {
                       {(journey.Covered_distance / 1000).toFixed(2)}
                     </TableCell>
                     <TableCell sx={{ color: "#d4ff00e8" }}>
-                      {" "}
                       {(journey.Duration / 60).toFixed(2)}
                     </TableCell>
                   </TableRow>

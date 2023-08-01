@@ -28,9 +28,10 @@ const Journeys = () => {
 
   return (
     <Container>
-      <Typography variant="h5" sx={{ color: "#ffffff" }}>
+      <Typography variant="h5" sx={{ color: "#ffffff", marginTop: "10px" }}>
         All City Bikes Journeys
       </Typography>
+
       {isFetching && (
         <div>
           <Loading />
