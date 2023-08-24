@@ -145,15 +145,6 @@ To make the test having all passed, you must run backend file on port 5173 ``htt
 
 
 ## [Project Reflection](#Project-reflection)
-- [*What was my motivation? Why did I build this project?*](#motivation)
-
-This pre-assignment is the best time challenge for full stack coding. I am really fond of learning how to work with map or transportation app because normally I use map app everyday and I get to search for journeys/stations, so yeah I wonder and figure it out how it work under the hood. In addition, I would want to challenge myself with this assignment after a while learning programming, especially focusing on front-end skills and avoiding tutorial hell. 
-
-Another motivation is I would want to be recognized by my skills both front-end and back-end, although my experience in this field is roughly just one year. Truly I have gained a lot of new knowledge through this challenge; learning by doing it persistently. Through this pre-assignment, I think I am the perfect one for Solita Dev Academy as I still get to learn a lot of thing and complete myself to become more improved and skilled developer. 
-This is my fav quote:
-<strong>``Dreamer and Doer are the same.``</strong>
-
-Thank you for who created this assignment and your time and consideration. 
 -  [What was challenges I met?](#challenges)
 
 As a coder, I also builds and break things to find the best solution for the app both front-end and back-end. I changed from one way of doing to another one to see if it works better and this leads to time-consuming or even conflicts??. I also met a lot of bugs but thanks to Stack Overflow, I could handle those bugs.
